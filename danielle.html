@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Distribuidora Danielle - Case Study</title>
+	<meta name="description"
+		content="Case study for Distribuidora Danielle, a local distributor with a newly designed visual identity and a self-initiated e-commerce landing page concept.">
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<link rel="icon" type="image/x-icon" href="Imagenes/Marca.svg">
+	<link rel="stylesheet" href="https://use.typekit.net/owy8jgx.css">
+	<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+	<style type="text/tailwindcss">
+		@theme {
+     --text-10xl: 10rem;
+     --color-indigo-dye: #00416A;
+     --color-eggshell: #F0EAD6;
+     --color-warm-sandy: #C8B39B;
+     --color-deep-moss: #3A5635;
+     --color-burnt-orangeish: #D57B0E;
+	 --font-tt-modernoir: "tt-modernoir", sans-serif;
+	 --font-cascadia-mono: "Cascadia Mono", monospace;
+	 --font-satoshi: "Satoshi", sans-serif;
+   }
+   
+   html {
+      scroll-padding-top: 85px;
+   }
+   .reveal-init {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+   }
+   .reveal-active {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   p {
+      text-wrap: pretty;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+   }
+	</style>
+</head>
+
+<body class="bg-eggshell selection:bg-deep-moss selection:text-eggshell font-satoshi text-indigo-dye overflow-x-hidden">
+	<!-- Navbar -->
+	<nav id="main-nav"
+		class="flex w-full justify-between items-center py-5 px-6 md:px-10 sticky top-0 z-50 bg-eggshell transition-transform duration-300 border-b border-indigo-dye/10">
+		<div>
+			<a href="index.html"
+				class="group flex items-center gap-2 font-tt-modernoir font-bold text-xl hover:text-burnt-orangeish transition-colors duration-300">
+				<i class="ph ph-arrow-left transition-transform duration-300 group-hover:-translate-x-1"></i> Back to
+				Portfolio
+			</a>
+		</div>
+		<div class="flex md:hidden font-cascadia-mono text-xs">
+			<a href="https://mili-martinez.github.io/danielle-distribuidora/" target="_blank" rel="noopener noreferrer"
+				class="text-burnt-orangeish font-bold border border-burnt-orangeish/30 bg-burnt-orangeish/5 px-3 py-1.5 hover:bg-burnt-orangeish hover:text-eggshell transition-all duration-300">
+				«Live Demo»
+			</a>
+		</div>
+
+		<div class="hidden md:flex gap-10 text-sm font-cascadia-mono">
+			<a href="#overview"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Overview»</a>
+			<a href="#problem"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Problem»</a>
+			<a href="#brand-identity"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Branding»</a>
+			<a href="#live-demo"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«E-commerce»</a>
+			<a href="https://mili-martinez.github.io/danielle-distribuidora/" target="_blank" rel="noopener noreferrer"
+				class="transition-all duration-200 tracking-tighter text-burnt-orangeish hover:transition-delay-200 hover:tracking-wider">«Live
+				Demo»</a>
+
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<header class="w-[90%] mx-auto mt-20 mb-10 text-center">
+		<div class="flex flex-wrap justify-center gap-2 mb-6 font-cascadia-mono">
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-4 py-1 text-xs uppercase tracking-wider">Visual
+				Identity</span>
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-4 py-1 text-xs uppercase tracking-wider">Web
+				Design</span>
+		</div>
+		<h1 class="font-tt-modernoir font-bold text-5xl md:text-8xl leading-none mb-6">Distribuidora<br>Danielle</h1>
+		<p class="text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
+			<strong>Redesigning the visual identity</strong> for a local distributor, combined with a self-initiated<br
+				class="hidden md:flex">
+			<strong>e-commerce landing page concept</strong> to scale their commercial digital presence.
+		</p>
+		<div class="mb-16 flex flex-wrap justify-center gap-4">
+			<a href="https://mili-martinez.github.io/danielle-distribuidora/" target="_blank" rel="noopener noreferrer"
+				class="flex items-center gap-2 border-2 border-indigo-dye bg-indigo-dye text-eggshell px-6 py-3 font-cascadia-mono text-sm font-bold hover:bg-transparent hover:text-burnt-orangeish hover:border-burnt-orangeish transition-all duration-300 group">
+				Live Demo <i class="ph ph-arrow-up-right"></i>
+			</a>
+			<a href="https://github.com/Mili-Martinez/danielle-distribuidora" target="_blank" rel="noopener noreferrer"
+				class="flex items-center gap-2 border-2 border-indigo-dye bg-indigo-dye text-eggshell px-6 py-3 font-cascadia-mono text-sm font-bold hover:bg-transparent hover:text-burnt-orangeish hover:border-burnt-orangeish transition-all duration-300 group">GitHub
+				<i class="ph ph-github-logo"></i> </a>
+		</div>
+		<div
+			class="w-full aspect-video md:aspect-[21/9] bg-indigo-dye/10 border-2 border-indigo-dye/20 flex justify-center items-center overflow-hidden relative group">
+			<img src="Imagenes/danielle-hero.jpg" alt="VEZKA Hero Image"
+				class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+		</div>
+	</header>
+
+	<!-- Overview Bento Box -->
+	<section id="overview" class="w-[90%] max-w-5xl mx-auto my-30">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div
+				class="col-span-1 md:col-span-2 border-2 border-indigo-dye p-8 hover:bg-indigo-dye/5 transition-colors duration-300">
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4 border-b border-indigo-dye/30 pb-2">The Context
+				</h3>
+				<p class="text-sm leading-relaxed">
+					Danielle is a well-established local distributor, bookstore, and stationery shop that needed to
+					modernize its
+					outdated visual identity. <strong>The client’s initial request focused on creating a cohesive brand
+						system</strong> based on their original logo to unify their physical store and social media
+					presence with a
+					closer, more creative tone. Moving beyond the official brief, <strong>I leveraged this project as a
+						personal
+						exploration to design a self-initiated e-commerce landing page concept,</strong> demonstrating
+					how a
+					real-world local brand can seamlessly expand into a responsive digital retail experience.
+				</p>
+			</div>
+			<div class="col-span-1 flex flex-col gap-6 font-cascadia-mono">
+				<div class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">My Role</h4>
+					<p class="text-lg"> Brand & UI Developer</p>
+				</div>
+				<div class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">Timeline</h4>
+					<p class="text-lg">2 Months (2025)</p>
+				</div>
+				<div class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">Tools</h4>
+					<p class="text-lg">Illustrator & Antigravity</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- The Problem -->
+	<section id="problem" class="w-[90%] max-w-2xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">The Challenge</h2>
+
+		<div class="space-y-12">
+			<!-- Problem -->
+			<p class="text-lg md:text-xl leading-relaxed">
+				<strong
+					class="text-deep-moss font-bold block text-sm uppercase tracking-widest mb-3 font-cascadia-mono">[The
+					Problem]</strong>
+				Danielle operated with an <strong>outdated visual identity and a rigid legacy logo, lacking a cohesive
+					design
+					system</strong> to
+				represent its creative bookstore and stationery business across physical and social media channels.
+			</p>
+
+			<!-- Goal -->
+			<p class="text-base md:text-lg leading-relaxed">
+				<strong
+					class="text-deep-moss font-bold block text-sm uppercase tracking-widest mb-3 font-cascadia-mono">[The
+					Goal]</strong>
+				<strong>Redesign the visual identity</strong> into a vibrant, approachable brand system for physical
+				touchpoints, and <strong>extend the
+					project into a self-initiated responsive landing page</strong> to explore its digital e-commerce
+				potential.
+			</p>
+		</div>
+
+	</section>
+
+	<!-- Brand Refresh & Identity System -->
+	<section id="brand-identity" class="w-[90%] md:max-w-5xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-8 text-center">Brand Refresh & Identity System
+		</h2>
+		<p class="text-sm md:text-base leading-relaxed text-center mb-10 md:max-w-3xl mx-auto">
+			To focus the branding direction, I translated the client’s core values into a <strong>clean visual system
+				that
+				addresses the specific identity needs </strong>of a modern, creative local store
+		</p>
+		<!--Logotype-->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 mx-auto">
+			<div class="md:max-w-[27rem]">
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4">1. The Logotype</h3>
+				<p class="text-sm leading-relaxed">
+					The updated visual identity reimagines the legacy logo, deconstructing its original rigid triangle
+					into a
+					<strong>fluid, organic centerpiece</strong> that replaces the letter "A" in the <strong>new custom
+						logotype.</strong> Utilizing the expressive
+					weight of Chaloops Bold for the main brand name and anchoring it with Archivo Condensed Medium for
+					the
+					descriptive subtext, this structural shift <strong>infuses an artistic, playful energy into the core
+						mark</strong> while
+					retaining a strong typographic balance suitable for diverse scale applications.
+				</p>
+			</div>
+			<div class="aspect-square flex justify-center items-center text-xs ">
+				<img src="Imagenes/danielle-rebrand.png" alt="rebrand" class="h-full aspect-square">
+			</div>
+		</div>
+		<!--Color & Typography-->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 md:flex-row-reverse mx-auto">
+			<div class="order-2 md:order-1 w-full  flex flex-col justify-center items-center p-6 text-center">
+				<img src="Imagenes/danielle-type-color.png" alt="type-and-color" class="h-full ">
+			</div>
+			<div class="order-1 md:order-2 md:max-w-[27rem]">
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4">2. Color & Typography</h3>
+				<p class="text-sm leading-relaxed">
+					The visual language pairs <strong>friendly yet expressive typography</strong> with an
+					<strong>intensely
+						vibrant, high-contrast color
+						palette.</strong> Selected specifically to
+					break away from the cold, corporate aesthetic of the past, these contrasting hues are engineered to
+					live
+					harmoniously side-by-side, <strong>injecting an immediate sense of joy, artistic expression, and
+						local
+						closeness</strong> into
+					every visual asset.
+				</p>
+			</div>
+		</div>
+		<!--Graphic Assets-->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 mx-auto">
+			<div class="md:max-w-[27rem]">
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4">3. Graphic Assets</h3>
+				<p class="text-sm leading-relaxed">
+					To complement the typographic ecosystem, I developed a library of <strong>dynamic graphic elements
+						and
+						fluid, organic patterns.</strong> This versatile visual toolkit allows the brand’s newfound
+					creative
+					identity to scale
+					seamlessly across social media templates, print packaging, and physical storefronts, ensuring that
+					the
+					<strong>cheerful and energetic brand voice</strong> remains unified across all physical and digital
+					touchpoints.
+				</p>
+			</div>
+			<div class="w-full flex flex-col justify-center items-center p-6 text-center ">
+				<img src="Imagenes/danielle-graphics.png" alt="graphics-assets" class="w-full">
+			</div>
+		</div>
+	</section>
+
+	<!--Brand Application-->
+	<section id="brand-application" class="w-[90%] mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">Brand Application</h2>
+		<p class="text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto mb-16">
+			To validate the <strong>versatility of the identity system</strong>, I mapped the visual assets onto a
+			series of <strong>physical
+				touchpoints</strong>, ensuring the brand’s creative energy translates seamlessly from digital screens to
+			tangible
+			customer experiences:
+		</p>
+		<div class="mx-auto my-30">
+			<h2 class="font-tt-modernoir font-bold text-3xl mb-10 border-b border-indigo-dye pb-4">Mockups</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div
+					class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+					<img src="Imagenes/danielle-brand-mockup-1.png" alt="mockup" class="w-full object-cover">
+				</div>
+				<div
+					class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:-rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+					<img src="Imagenes/danielle-brand-mockup-2.png" alt="mockup" class="h-full object-cover">
+				</div>
+				<div
+					class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+					<img src="Imagenes/danielle-brand-mockup-3.png" alt="mockup" class="h-full object-cover">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Final Interface & Live Demo -->
+	<section id="live-demo" class="w-[90%] mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">Final Interface & Live Demo</h2>
+		<p class="text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto mb-16">
+			The final phase of the project focused on <strong>translating the high-fidelity UI mockups into a
+				responsive,
+				pixel-perfect website ready for interaction,</strong> bringing the new brand presence to life directly
+			in the
+			browser.
+		</p>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20 max-w-4xl mx-auto">
+			<div class="space-y-4">
+				<strong
+					class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono mb-4">[
+					Front-End Implementation ]</strong>
+				<p class="text-sm leading-relaxed mb-4">
+					Using Google Antigravity as the primary development environment, <strong>I wrote the clean HTML
+						structure and implemented a highly customized styling architecture.</strong> The technical
+					execution
+					focused on recreating the fluid layouts, complex organic backgrounds, and precise card rotations
+					crafted during the design phase, <strong>achieving a responsive experience that preserves visual
+						fidelity</strong> across all viewports.
+				</p>
+			</div>
+			<div class="space-y-6 ">
+				<strong
+					class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono mb-4">[
+					Live Prototype & Code ]</strong>
+				<p class="text-sm leading-relaxed mb-4">
+					The resulting landing page functions as a<strong> living extension of the brand's new
+						ecosystem</strong>,
+					bridging creative expression with interactive web performance.
+				</p>
+				<div class="pt-4 flex flex-wrap gap-4 mx-auto">
+					<a href="https://mili-martinez.github.io/danielle-distribuidora/" target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center gap-2 border-2 border-indigo-dye bg-indigo-dye text-eggshell px-5 py-2.5 font-cascadia-mono text-xs font-bold hover:bg-transparent hover:text-burnt-orangeish hover:border-burnt-orangeish transition-all duration-300 group">
+						<i
+							class="ph ph-arrow-up-right text-base group-hover:scale-110 transition-transform duration-200"></i>
+						View Live Demo
+					</a>
+					<a href="https://github.com/Mili-Martinez/danielle-distribuidora" target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center gap-2 border-2 border-indigo-dye hover:bg-indigo-dye hover:text-eggshell text-indigo-dye px-5 py-2.5 font-cascadia-mono text-xs font-bold transition-all duration-300 group">
+						<i class="ph ph-github-logo text-base"></i> View Code
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Final Showcase Gallery -->
+		<div class="mx-auto my-30">
+			<h2 class="font-tt-modernoir font-bold text-3xl mb-10 border-b border-indigo-dye pb-4">Final Visuals</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div
+					class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+					<img src="Imagenes/danielle-web-mockup-1.png" alt="mockup" class="w-full object-cover">
+				</div>
+				<div
+					class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:-rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+					<img src="Imagenes/danielle-web-mockup-2.png" alt="mockup" class="h-full object-cover">
+				</div>
+				<div
+					class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+					<img src="Imagenes/danielle-web-mockup-3.png" alt="mockup" class="h-full object-cover">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="w-full bg-indigo-dye text-eggshell py-16 text-center mt-20 font-cascadia-mono">
+		<p
+			class="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed text-eggshell font-satoshi w-[80%] opacity-80 mb-8 select-none">
+			*Distribuidora Danielle — Brand & Web presence case study.*
+		</p>
+		<div class="flex justify-center gap-8 text-sm">
+			<a href="index.html" class="hover:text-warm-sandy transition-colors">Home</a>
+			<a href="mailto:milagrosmartinezdg@gmail.com" class="hover:text-warm-sandy transition-colors">Contact</a>
+		</div>
+	</footer>
+	<script>
+		// Reveal Animation Logic and Smart Navbar
+		const init = () => {
+			console.log("Danielle script initialized");
+
+			// 1. Reveal Animations
+			try {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("reveal-active");
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+				const scrollElements = document.querySelectorAll(
+					"section h2, " +
+					"#overview .col-span-2, #overview .col-span-1 > div, " +
+					"#problem .space-y-12 > p, " +
+					"#brand-identity > p, #brand-identity .grid, " +
+					"#brand-application > p, #brand-application .my-30 h2, #brand-application .grid > div, " +
+					"#live-demo > p, #live-demo .grid, #live-demo .my-30 h2, #live-demo .my-30 .grid > div, " +
+					"footer > p, footer > div"
+				);
+				scrollElements.forEach((el, index) => {
+					el.classList.add("reveal-init");
+					// Stagger elements slightly if they are siblings
+					el.style.transitionDelay = `${(index % 3) * 100}ms`;
+					observer.observe(el);
+				});
+				console.log("Animations initialized successfully");
+			} catch (e) {
+				console.error("Error in reveal animations:", e);
+			}
+
+			// 1.5 Hero Entry Animations (Staggered title and hero elements)
+			try {
+				// Title staggered lines
+				const heroTitle = document.querySelector('header h1');
+				if (heroTitle) {
+					const lines = heroTitle.innerHTML.split(/<br\s*\/?>/i);
+					heroTitle.innerHTML = lines.map((line, index) => {
+						return `<span class="inline-block overflow-hidden align-bottom pb-2"><span class="block transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" style="transform: translateY(120%); opacity: 0; transition-delay: ${150 + (index * 200)}ms" id="hero-line-${index}">${line}</span></span>`;
+					}).join('<br>');
+
+					void heroTitle.offsetWidth;
+
+					setTimeout(() => {
+						lines.forEach((_, index) => {
+							const el = document.getElementById(`hero-line-${index}`);
+							if (el) {
+								el.style.transform = 'translateY(0)';
+								el.style.opacity = '1';
+							}
+						});
+					}, 50);
+				}
+
+				// Remaining hero elements reveal on load
+				const headerChildren = document.querySelectorAll("header > *:not(h1)");
+				headerChildren.forEach((el) => {
+					el.classList.add("reveal-init");
+					setTimeout(() => el.classList.add("reveal-active"), 800);
+				});
+			} catch (e) {
+				console.error("Error in hero entry animations:", e);
+			}
+
+			// 2. Custom Cursor
+			try {
+				if (window.matchMedia("(pointer: fine)").matches) {
+					const cursor = document.createElement('div');
+					cursor.className = 'fixed top-0 left-0 w-3 h-3 bg-burnt-orangeish/80 rounded-full pointer-events-none z-[100] transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 hidden md:block';
+					document.body.appendChild(cursor);
+
+					let scale = 1;
+					document.addEventListener('mousemove', (e) => {
+						cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) scale(${scale})`;
+					});
+
+					const hoverables = document.querySelectorAll('a, button, .group, .persona-tab, .border-2, .cursor-help');
+					hoverables.forEach(el => {
+						el.addEventListener('mouseenter', () => scale = 3);
+						el.addEventListener('mouseleave', () => scale = 1);
+					});
+					console.log("Custom cursor initialized successfully");
+				}
+			} catch (e) {
+				console.error("Error in custom cursor:", e);
+			}
+
+			// 3. Magnetic Links
+			try {
+				const magnetics = document.querySelectorAll('nav a, nav button, footer a, header div a, .magnetic-el');
+				magnetics.forEach(el => {
+					el.addEventListener('mousemove', (e) => {
+						const rect = el.getBoundingClientRect();
+						const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
+						const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
+						el.style.transform = `translate(${x}px, ${y}px)`;
+						el.style.transition = 'transform 0.1s ease-out';
+					});
+					el.addEventListener('mouseleave', () => {
+						el.style.transform = 'translate(0px, 0px)';
+						el.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+					});
+				});
+				console.log("Magnetic links initialized successfully");
+			} catch (e) {
+				console.error("Error in magnetic links:", e);
+			}
+
+			// 4. Smart Navbar
+			try {
+				const nav = document.getElementById('main-nav');
+				let lastScrollY = window.scrollY;
+
+				window.addEventListener('scroll', () => {
+					if (!nav) return;
+					if (window.scrollY > lastScrollY && window.scrollY > 100) {
+						nav.style.transform = 'translateY(-100%)';
+					} else {
+						nav.style.transform = 'translateY(0)';
+					}
+					lastScrollY = window.scrollY;
+				}, { passive: true });
+				console.log("Smart Navbar scroll listener registered");
+			} catch (e) {
+				console.error("Error in smart navbar scroll listener:", e);
+			}
+		};
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', init);
+		} else {
+			init();
+		}
+	</script>
+</body>
+
+</html>

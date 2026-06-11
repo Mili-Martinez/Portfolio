@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VEZKA Bank Ecosystem - Case Study</title>
+	<meta name="description"
+		content="Case study for VEZKA Bank Ecosystem, a comprehensive digital banking solution focused on financial inclusion and seamless user flows.">
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<link rel="icon" type="image/x-icon" href="Imagenes/Marca.svg">
+	<link rel="stylesheet" href="https://use.typekit.net/owy8jgx.css">
+	<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+	<style type="text/tailwindcss">
+		@theme {
+     --text-10xl: 10rem;
+     --color-indigo-dye: #00416A;
+     --color-eggshell: #F0EAD6;
+     --color-warm-sandy: #C8B39B;
+     --color-deep-moss: #3A5635;
+     --color-burnt-orangeish: #D57B0E;
+	 --font-tt-modernoir: "tt-modernoir", sans-serif;
+	 --font-cascadia-mono: "Cascadia Mono", monospace;
+	 --font-satoshi: "Satoshi", sans-serif;
+   }
+   
+   html {
+      scroll-padding-top: 85px;
+   }
+   .reveal-init {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+   }
+   .reveal-active {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   .persona-content {
+      animation: fadeInTab 0.4s ease-in-out;
+   }
+   @keyframes fadeInTab {
+      from {
+         opacity: 0;
+         transform: translateY(10px);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+   p {
+      text-wrap: pretty;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+   }
+	</style>
+</head>
+
+<body class="bg-eggshell selection:bg-deep-moss selection:text-eggshell font-satoshi text-indigo-dye overflow-x-hidden">
+	<!-- Navbar -->
+	<nav id="main-nav"
+		class="flex w-full justify-between items-center py-5 px-6 md:px-10 sticky top-0 z-50 bg-eggshell transition-transform duration-300 border-b border-indigo-dye/10">
+		<div>
+			<a href="index.html"
+				class="group flex items-center gap-2 font-tt-modernoir font-bold text-xl hover:text-burnt-orangeish transition-colors duration-300">
+				<i class="ph ph-arrow-left transition-transform duration-300 group-hover:-translate-x-1"></i> Back to
+				Portfolio
+			</a>
+		</div>
+		<div class="flex md:hidden font-cascadia-mono text-xs">
+			<a href="vezka-web.html"
+				class="text-burnt-orangeish font-bold border border-burnt-orangeish/30 bg-burnt-orangeish/5 px-3 py-1.5 hover:bg-burnt-orangeish hover:text-eggshell transition-all duration-300">
+				«Web Case»
+			</a>
+		</div>
+		<div class="hidden md:flex gap-10 text-sm font-cascadia-mono">
+			<a href="#overview"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Overview»</a>
+			<a href="#problem"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Problem»</a>
+			<a href="#solution"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Solution»</a>
+			<a href="vezka-web.html"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider text-burnt-orangeish font-bold">«Web
+				Case»</a>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<header class="w-[90%] mx-auto mt-20 mb-10 text-center">
+		<div class="flex flex-wrap justify-center gap-2 mb-6 font-cascadia-mono">
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-4 py-1 text-xs uppercase tracking-wider">UX
+				Research</span>
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-4 py-1 text-xs uppercase tracking-wider">UI Case
+				Study</span>
+		</div>
+		<h1 class="font-tt-modernoir font-bold text-5xl md:text-8xl leading-none mb-6">VEZKA Bank<br>Ecosystem</h1>
+		<p class="text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
+			<strong>A comprehensive digital banking solution</strong> focused on financial inclusion, intuitive design,
+			and
+			seamless user
+			flows.
+		</p>
+		<div class="mb-16 flex justify-center gap-4">
+			<a href="https://www.figma.com/proto/hiiQdrgPIIhpSq959VXm3t/Wireframes?node-id=209-1061&viewport=281%2C115%2C0.13&t=1D56P4Ny5OP0MKXZ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=209%3A1061&page-id=209%3A520"
+				target="_blank" rel="noopener noreferrer"
+				class="flex items-center gap-2 border-2 border-indigo-dye bg-indigo-dye text-eggshell px-6 py-3 font-cascadia-mono text-sm font-bold hover:bg-transparent hover:text-burnt-orangeish hover:border-burnt-orangeish transition-all duration-300 group">
+				<i class="ph ph-figma-logo text-lg group-hover:scale-110 transition-transform duration-200"></i> View
+				Figma
+				Prototype <i class="ph ph-arrow-up-right"></i>
+			</a>
+		</div>
+		<div
+			class="w-full aspect-video md:aspect-[21/9] bg-indigo-dye/10 border-2 border-indigo-dye/20 flex justify-center items-center overflow-hidden relative group">
+			<img src="Imagenes/vezka-app.jpg" alt="VEZKA Hero Image"
+				class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+		</div>
+	</header>
+
+	<!-- Overview Bento Box -->
+	<section id="overview" class="w-[90%] max-w-5xl mx-auto my-30">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div
+				class="col-span-1 md:col-span-2 border-2 border-indigo-dye p-8 hover:bg-indigo-dye/5 transition-colors duration-300">
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4 border-b border-indigo-dye/30 pb-2">The Context
+				</h3>
+				<p class="text-sm leading-relaxed">
+					<strong>Vezka is a digital banking platform designed to streamline financial management by
+						integrating
+						accounts, payments, and cards into a single, cohesive ecosystem.</strong> The project focused on
+					creating an
+					intuitive
+					digital experience tailored for individuals, freelancers, and small businesses who demand
+					simplicity,
+					transparency, and absolute control over their finances.<strong> As the sole designer, I led the
+						entire product
+						lifecycle</strong> from
+					conducting user research and defining the information architecture to crafting wireframes,
+					interactive
+					prototypes, and the final high-fidelity visual design.
+				</p>
+			</div>
+			<div class="col-span-1 flex flex-col gap-6 font-cascadia-mono">
+				<div class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">My Role</h4>
+					<p class="text-lg"> UX Researcher &<br>UX/UI Designer</p>
+				</div>
+				<div class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">Timeline</h4>
+					<p class="text-lg">4 Months (2025)</p>
+				</div>
+				<a href="https://www.figma.com/file/hiiQdrgPIIhpSq959VXm3t/Wireframes" target="_blank"
+					rel="noopener noreferrer"
+					class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1 block relative group">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">Tools</h4>
+					<p class="text-lg">Figma</p>
+					<span
+						class="absolute bottom-3 right-4 text-xs font-bold text-burnt-orangeish flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-cascadia-mono">
+						Open File <i class="ph ph-arrow-up-right"></i>
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- The Problem -->
+	<section id="problem" class="w-[90%] max-w-2xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">The Challenge</h2>
+
+		<div class="space-y-12">
+			<!-- Problem -->
+			<p class="text-lg md:text-xl leading-relaxed">
+				<strong
+					class="text-deep-moss font-bold block text-sm uppercase tracking-widest mb-3 font-cascadia-mono">[The
+					Problem]</strong>
+				<strong>Many users,</strong> especially those with limited time or mobility, <strong>find it difficult
+					to manage
+					their finances
+					or open
+					bank accounts in person.</strong>
+			</p>
+
+			<!-- Goal -->
+			<p class="text-base md:text-lg leading-relaxed">
+				<strong
+					class="text-deep-moss font-bold block text-sm uppercase tracking-widest mb-3 font-cascadia-mono">[The
+					Goal]</strong>
+				Design an intuitive and secure mobile banking app that allows users to <strong>open and manage their
+					accounts
+					quickly
+					and efficiently from anywhere.</strong>
+			</p>
+		</div>
+
+	</section>
+
+	<!-- User Research & Insights -->
+	<section id="research" class="w-[90%] max-w-4xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">User Research</h2>
+		<div class="grid grid-cols-1 md:grid-cols-[1.2fr_1.8fr] gap-10 items-start">
+			<!-- Research Summary -->
+			<div class="space-y-6">
+				<strong class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+					Summary
+					]</strong>
+				<p class="text-sm leading-relaxed">
+					Through secondary research and user interviews, I analyzed how users manage their accounts and
+					navigate
+					current banking limitations. While I initially assumed <strong>transaction speed</strong> was the
+					main user
+					need,
+					findings
+					showed that <strong>transparency, accessible support and security</strong> were equally important.
+					These
+					insights
+					shifted the
+					focus toward building an <strong>intuitive, trustworthy, and highly inclusive mobile
+						experience.</strong>
+				</p>
+			</div>
+			<!-- Key Takeaways / Pain Points -->
+			<div class="space-y-6">
+				<strong class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+					Pain
+					Points
+					]</strong>
+				<div class="space-y-4">
+					<div class="border-b border-indigo-dye/10 pb-4">
+						<h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-deep-moss font-cascadia-mono">1.
+							Complex
+							navigation
+						</h4>
+						<p class="text-sm ">Users find it difficult to locate key features like transfers or card
+							settings.</p>
+					</div>
+					<div class="border-b border-indigo-dye/10 pb-4">
+						<h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-deep-moss font-cascadia-mono">2.
+							Lack of
+							transparency</h4>
+						<p class="text-sm">Hidden fees or unclear costs generate distrust.</p>
+					</div>
+					<div class="border-b border-indigo-dye/10 pb-4">
+						<h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-deep-moss font-cascadia-mono">3.
+							Limited
+							accessibility</h4>
+						<p class="text-sm">Users with little time or mobility struggle to visit physical branches.</p>
+					</div>
+					<div>
+						<h4 class="font-bold text-sm uppercase tracking-wider mb-1 text-deep-moss font-cascadia-mono">4.
+							Impersonal
+							service
+						</h4>
+						<p class="text-sm">Automated responses without human touch make users feel unsupported.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- User Personas -->
+	<section id="personas" class="w-[90%] max-w-4xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-10 text-center">User Personas</h2>
+
+		<!-- Tabs Headers -->
+		<div class="flex justify-center border-b border-indigo-dye/20 mb-8 font-cascadia-mono text-xs md:text-sm">
+			<button
+				class="persona-tab active px-4 py-2 border-b-2 border-deep-moss font-bold text-deep-moss hover:cursor-pointer transition-colors duration-200"
+				data-tab="persona-camila">« Camila (Freelancer) »</button>
+			<button
+				class="persona-tab px-4 py-2 border-b-2 border-transparent font-bold text-indigo-dye/60 hover:text-indigo-dye hover:cursor-pointer transition-colors duration-200"
+				data-tab="persona-freelancer">« Martín (Manager) »</button>
+			<button
+				class="persona-tab px-4 py-2 border-b-2 border-transparent font-bold text-indigo-dye/60 hover:text-indigo-dye hover:cursor-pointer transition-colors duration-200"
+				data-tab="persona-older">« Elena (Older Adult) »</button>
+		</div>
+
+		<!-- Tabs Content Container -->
+		<div id="persona-content-container" class="min-h-[250px]">
+			<!-- Persona 1: Camila -->
+			<div id="persona-camila" class="persona-content block space-y-6">
+				<div class="flex flex-col md:flex-row gap-8 justify-between">
+					<div class="flex-1 space-y-4">
+						<strong
+							class="text-sm uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+							Camila
+							— The Independent Designer ]</strong>
+						<p class="text-sm leading-relaxed italic font-bold">
+							“I want my bank to be as flexible and agile as my work. If everything is online, why
+							shouldn’t my finances
+							be too?”
+						</p>
+						<p class="text-sm leading-relaxed">
+							Camila is a 26-year-old freelance designer managing her own fluctuating income. She needs a
+							frictionless,
+							fully remote mobile banking experience to achieve total financial control and eliminate
+							time-consuming
+							in-person bureaucracy.
+						</p>
+					</div>
+					<div class="flex-1 space-y-4 md:border-l md:border-indigo-dye/10 md:pl-8">
+						<div>
+							<h4
+								class="font-bold text-sm uppercase tracking-wider text-deep-moss mb-1 font-cascadia-mono">
+								Goals</h4>
+							<ul class="text-sm list-disc list-inside space-y-1">
+								<li>Open account 100% online.</li>
+								<li>Track freelance income easily.</li>
+								<li>Manage transfers via mobile.</li>
+							</ul>
+						</div>
+						<div>
+							<h4
+								class="font-bold text-sm uppercase tracking-wider text-deep-moss mb-1 font-cascadia-mono">
+								Frustrations
+							</h4>
+							<ul class="text-sm list-disc list-inside space-y-1">
+								<li>Wasting productive hours visiting physical branches.</li>
+								<li>Platforms unfit for freelancers.</li>
+								<li>Confusing interfaces with hidden fees.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Persona 2: Martín -->
+			<div id="persona-freelancer" class="persona-content hidden space-y-6">
+				<div class="flex flex-col md:flex-row gap-8 justify-between">
+					<div class="flex-1 space-y-4">
+						<strong
+							class="text-sm uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+							MARTÍN
+							— THE
+							BUSY MANAGER ]</strong>
+						<p class="text-sm leading-relaxed italic font-bold">
+							"I don't have time to waste. My bank should adapt to my hectic pace, not the other way
+							around."
+						</p>
+						<p class="text-sm leading-relaxed">
+							Martín is a 42-year-old sales manager and father of two balancing a demanding career and
+							family
+							commitments. He requires a secure, high-efficiency banking app to consolidate and oversee
+							both his
+							personal and household finances on the go.
+						</p>
+					</div>
+					<div class="flex-1 space-y-4 md:border-l md:border-indigo-dye/10 md:pl-8">
+						<div>
+							<h4
+								class="font-bold text-sm uppercase tracking-wider text-deep-moss mb-1 font-cascadia-mono">
+								Goals</h4>
+							<ul class="text-sm list-disc list-inside space-y-1">
+								<li>Centralize cards and payments.</li>
+								<li>Execute rapid, secure operations.</li>
+								<li>Set up secure family accounts.</li>
+							</ul>
+						</div>
+						<div>
+							<h4
+								class="font-bold text-sm uppercase tracking-wider text-deep-moss mb-1 font-cascadia-mono">
+								Frustrations
+							</h4>
+							<ul class="text-sm list-disc list-inside space-y-1">
+								<li>Slow platforms & excessive steps.</li>
+								<li>Delayed customer support.</li>
+								<li>Lack of digital security clarity.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Persona 3: Elena -->
+			<div id="persona-older" class="persona-content hidden space-y-6">
+				<div class="flex flex-col md:flex-row gap-8 justify-between">
+					<div class="flex-1 space-y-4">
+						<strong
+							class="text-sm uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+							ELENA
+							— THE
+							RETIRED TEACHER ]</strong>
+						<p class="text-sm leading-relaxed italic font-bold">
+							"I want to feel safe handling my banking from home, without depending on anyone else for
+							help."
+						</p>
+						<p class="text-sm leading-relaxed">
+							Elena is a 63-year-old retired literature teacher who isn't a digital native but uses her
+							phone for
+							baseline daily tasks. She seeks a highly accessible, stable, and intuitive app to manage her
+							pension and
+							payments safely without relying on her children.
+						</p>
+					</div>
+					<div class="flex-1 space-y-4 md:border-l md:border-indigo-dye/10 md:pl-8">
+						<div>
+							<h4
+								class="font-bold text-sm uppercase tracking-wider text-deep-moss mb-1 font-cascadia-mono">
+								Goals</h4>
+							<ul class="text-sm list-disc list-inside space-y-1">
+								<li>Check balances independently.</li>
+								<li>Easily read the text on the screen.</li>
+								<li>Access humanized online support.</li>
+							</ul>
+						</div>
+						<div>
+							<h4
+								class="font-bold text-sm uppercase tracking-wider text-deep-moss mb-1 font-cascadia-mono">
+								Frustrations
+							</h4>
+							<ul class="text-sm list-disc list-inside space-y-1">
+								<li>Confusing technical jargon.</li>
+								<li>Complicated chatbot systems.</li>
+								<li>High anxiety when buttons fail.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Problem Statements -->
+	<section id="problem-statements" class="w-[90%] max-w-3xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-8 text-center">Problem Statements</h2>
+		<p class="text-sm md:text-base leading-relaxed text-center mb-10">
+			<strong>To focus the design direction,</strong> I synthesized the user research into <strong>clean,
+				actionable
+				problem statements</strong>
+			that
+			adress the specific core needs of each user profile:
+		</p>
+		<div class="space-y-8 border-l border-indigo-dye/20 pl-6">
+			<div>
+				<strong
+					class="text-xs uppercase tracking-widest text-deep-moss font-bold block mb-2 font-cascadia-mono">[
+					Camila's Need ]</strong>
+				<p class="text-sm leading-relaxed">
+					Camila needs a frictionless mobile onboarding process because managing physical paperwork and
+					visiting
+					traditional bank branches conflicts directly with her freelancing hours.
+				</p>
+			</div>
+			<div>
+				<strong
+					class="text-xs uppercase tracking-widest text-deep-moss font-bold block mb-2 font-cascadia-mono">[
+					Martín's Need ]</strong>
+				<p class="text-sm leading-relaxed">
+					Martín needs a centralized, highly efficient digital ecosystem because managing separate accounts
+					and slow
+					banking interfaces wastes his limited personal and family time.
+				</p>
+			</div>
+			<div>
+				<strong
+					class="text-xs uppercase tracking-widest text-deep-moss font-bold block mb-2 font-cascadia-mono">[
+					Elena's Need ]</strong>
+				<p class="text-sm leading-relaxed">
+					Elena needs an intuitive banking interface with clear typography and straightforward support because
+					complex
+					digital navigation and automated chat systems cause high anxiety.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- User Journey Map -->
+	<section id="journey" class="w-[90%] max-w-4xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">User Journey Map</h2>
+
+		<div class="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 items-start">
+			<!-- Left Column: Summary -->
+			<div class="space-y-6">
+				<strong class="text-sm uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+					Journey
+					Insights ]</strong>
+				<p class="text-sm leading-relaxed">
+					Common needs were identified across different profiles: freelancers, busy professionals, and older
+					adults. <strong>
+						users seek a simple, secure, and transparent way to manage their finances without visiting a
+						branch.</strong>
+				</p>
+				<p class="text-sm leading-relaxed">
+					The journey highlights key opportunities: simplifying account creation, offering clearer guidance,
+					improving
+					accessibility, and building trust through transparency and support.
+				</p>
+			</div>
+
+			<!-- Right Column: Timeline -->
+			<div class="relative pl-6 border-l border-indigo-dye/20 space-y-10 font-satoshi text-xs md:text-sm">
+
+				<!-- Stage 1 -->
+				<div class="relative">
+					<div class="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-deep-moss border border-eggshell">
+					</div>
+					<h4 class="font-tt-modernoir text-sm font-bold text-indigo-dye mb-1">1. Discovery</h4>
+					<p class="mb-1"><span class="font-bold">Action:</span> Realizing her current bank lacks flexibility
+						and
+						seeking alternatives.</p>
+					<p class="mb-1"><span class="font-bold">Feeling:</span> Frustrated by wasting time on complex
+						in-person
+						procedures.</p>
+					<p><span class="font-bold text-deep-moss">Opportunity:</span> Provide a clear landing page
+						highlighting
+						digital banking benefits.</p>
+				</div>
+
+				<!-- Stage 2 -->
+				<div class="relative">
+					<div class="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-deep-moss border border-eggshell">
+					</div>
+					<h4 class="font-tt-modernoir text-sm font-bold text-indigo-dye mb-1">2. Research</h4>
+					<p class="mb-1"><span class="font-bold">Action:</span> Searching websites and social media to
+						compare available banking apps.</p>
+					<p class="mb-1"><span class="font-bold">Feeling:</span> Curious but hesitant about platform
+						simplicity and setup ease.</p>
+					<p><span class="font-bold text-deep-moss">Opportunity:</span> Display transparent features,
+						comparisons, and
+						strong user testimonials.</p>
+				</div>
+
+				<!-- Stage 3 -->
+				<div class="relative">
+					<div class="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-deep-moss border border-eggshell">
+					</div>
+					<h4 class="font-tt-modernoir text-sm font-bold text-indigo-dye mb-1">3. Account Creation</h4>
+					<p class="mb-1"><span class="font-bold">Action:</span> Registering, filling in identity details, and
+						uploading
+						verification photos.</p>
+					<p class="mb-1"><span class="font-bold">Feeling:</span> Anxious that the onboarding process will be
+						long or
+						complicated.</p>
+					<p><span class="font-bold text-deep-moss">Opportunity:</span> Simplify the forms with instant
+						identity
+						validation and visual feedback.</p>
+				</div>
+
+				<!-- Stage 4 -->
+				<div class="relative">
+					<div class="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-deep-moss border border-eggshell">
+					</div>
+					<h4 class="font-tt-modernoir text-sm font-bold text-indigo-dye mb-1">4. Configuration</h4>
+					<p class="mb-1"><span class="font-bold">Action:</span> Choosing account types, ordering a physical
+						card, and
+						setting notifications.</p>
+					<p class="mb-1"><span class="font-bold">Feeling:</span> Empowered to control and manage everything
+						from her
+						phone.</p>
+					<p><span class="font-bold text-deep-moss">Opportunity:</span> Offer smart default settings tailored
+						specifically for independent freelancers.</p>
+				</div>
+
+				<!-- Stage 5 -->
+				<div class="relative">
+					<div class="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-deep-moss border border-eggshell">
+					</div>
+					<h4 class="font-tt-modernoir text-sm font-bold text-indigo-dye mb-1">5. Daily Transactions</h4>
+					<p class="mb-1"><span class="font-bold">Action:</span> Executing transfers, reviewing income, and
+						tracking
+						taxes or savings.</p>
+					<p class="mb-1"><span class="font-bold">Feeling:</span> Relaxed because the entire system feels
+						orderly and
+						intuitive.</p>
+					<p><span class="font-bold text-deep-moss">Opportunity:</span> Build a custom dashboard highlighting
+						freelance
+						income/expense tracking.</p>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Transition to Wireframes -->
+		<div class="max-w-2xl mx-auto mt-20 text-center">
+			<strong class="text-sm uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono mb-4">[
+				Wireframe Phase ]</strong>
+			<p class="text-sm leading-relaxed">
+				Before jumping into high-fidelity mockups, <strong>I mapped the main screen architecture.</strong> The
+				focus was
+				on <strong>optimizing
+					spacing and visual hierarchy, ensuring that critical indicators</strong> (like account balances and
+				recent
+				quick-transfer
+				buttons) <strong>remain instantly accessible.</strong>
+			</p>
+		</div>
+		<div class="w-full flex justify-center items-center text-xs font-cascadia-mono opacity-80 mt-10">
+			<img src="Imagenes/app-wireframes.png" alt="app-wireframes" class="w-full">
+		</div>
+	</section>
+
+	<!-- The Solution / Design Process -->
+	<section id="solution" class="w-[90%] max-w-4xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-10 text-center">The Solution</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+			<div>
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4">1. Financial Dashboard</h3>
+				<p class="text-sm leading-relaxed">
+					<strong>The primary dashboard delivers a high-contrast, minimal overview of active accounts, cards,
+						and
+						recent
+						transactions.</strong> Engineered specifically for independent freelancers and busy
+					professionals, it
+					features
+					real-time balance tracking, instant transfers, and automated expense categorization to maximize
+					financial
+					control while minimizing cognitive clutter.
+				</p>
+			</div>
+			<div class="aspect-square flex justify-center items-center text-xs ">
+				<img src="Imagenes/vezka-app-dashboard.png" alt="dashboard-wireframe" class="h-full">
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 md:flex-row-reverse">
+			<div class="order-2 md:order-1 aspect-square flex justify-center items-center text-xs">
+				<img src="Imagenes/vezka-app-transfer.png" alt="transfers-wireframe" class="h-full">
+			</div>
+			<div class="order-1 md:order-2">
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4">2. SEAMLESS TRANSACTION HUB</h3>
+				<p class="text-sm leading-relaxed">
+					Engineered to streamline daily money management, <strong>this high-efficiency transaction system
+						features a
+						quick-access interface for instant transfers.</strong> By incorporating visual contact
+					shortcuts, an
+					intuitive custom numerical keypad for seamless amount entry, and clean digital receipts with clear
+					status
+					validation, <strong>the flow simplifies complex banking tasks into a rapid, frictionless experience
+						tailored
+						for active freelancers.</strong>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Final Gallery -->
+	<section class="w-[90%] mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-3xl mb-10 border-b border-indigo-dye pb-4">Final Visuals</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div
+				class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+				<img src="Imagenes/vezka-app-mockup-1.png" alt="mockup" class="h-full object-cover">
+			</div>
+			<div
+				class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:-rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+				<img src="Imagenes/vezka-app-mockup-2.png" alt="mockup" class="h-full object-cover">
+			</div>
+			<div
+				class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+				<img src="Imagenes/vezka-app-mockup-3.png" alt="mockup" class="h-full object-cover">
+			</div>
+		</div>
+	</section>
+
+	<!-- Next Project Footer -->
+	<footer class="w-full bg-indigo-dye text-eggshell py-20 text-center mt-20">
+		<p class="text-sm uppercase tracking-widest opacity-70 mb-4 font-cascadia-mono">Up Next</p>
+		<a href="vezka-web.html"
+			class="group block font-tt-modernoir font-bold text-4xl md:text-6xl hover:text-burnt-orangeish transition-colors duration-300">
+			Vezka Product Website <i
+				class="ph ph-arrow-right inline-block group-hover:translate-x-2 transition-transform duration-300"></i>
+		</a>
+		<p class="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed mt-6 text-eggshell font-satoshi w-[80%]">
+			Explore the design and responsive development of <strong>Vezka's official product website</strong> a web
+			experience built to showcase key app features and streamline the digital onboarding funnel for new users.
+		</p>
+		<div class="mt-20 flex justify-center gap-6 text-sm font-cascadia-mono">
+			<a href="index.html" class="hover:text-warm-sandy transition-colors">Home</a>
+			<a href="mailto:milagrosmartinezdg@gmail.com" class="hover:text-warm-sandy transition-colors">Contact</a>
+		</div>
+	</footer>
+
+	<script>
+		// Reveal Animation Logic and Smart Navbar
+		const init = () => {
+			console.log("Vezka script initialized");
+
+			// 1. Reveal Animations
+			try {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("reveal-active");
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+				const scrollElements = document.querySelectorAll(
+					"section h2, " +
+					"#overview .col-span-2, #overview .col-span-1 > div, #overview .col-span-1 > a, " +
+					"#problem .space-y-12 > p, " +
+					"#research .grid > div, " +
+					"#personas .flex, #persona-content-container, " +
+					"#problem-statements > p, #problem-statements .space-y-8 > div, " +
+					"#journey .grid > div, #journey .max-w-2xl, #journey .w-full, " +
+					"#solution .grid, " +
+					"section .grid > div, " +
+					"footer > p, footer > a, footer > div"
+				);
+				scrollElements.forEach((el, index) => {
+					el.classList.add("reveal-init");
+					// Stagger elements slightly if they are siblings
+					el.style.transitionDelay = `${(index % 3) * 100}ms`;
+					observer.observe(el);
+				});
+				console.log("Animations initialized successfully");
+			} catch (e) {
+				console.error("Error in reveal animations:", e);
+			}
+
+			// 1.5 Hero Entry Animations (Staggered title and hero elements)
+			try {
+				// Title staggered lines
+				const heroTitle = document.querySelector('header h1');
+				if (heroTitle) {
+					const lines = heroTitle.innerHTML.split(/<br\s*\/?>/i);
+					heroTitle.innerHTML = lines.map((line, index) => {
+						return `<span class="inline-block overflow-hidden align-bottom pb-2"><span class="block transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" style="transform: translateY(120%); opacity: 0; transition-delay: ${150 + (index * 200)}ms" id="hero-line-${index}">${line}</span></span>`;
+					}).join('<br>');
+
+					void heroTitle.offsetWidth;
+
+					setTimeout(() => {
+						lines.forEach((_, index) => {
+							const el = document.getElementById(`hero-line-${index}`);
+							if (el) {
+								el.style.transform = 'translateY(0)';
+								el.style.opacity = '1';
+							}
+						});
+					}, 50);
+				}
+
+				// Remaining hero elements reveal on load
+				const headerChildren = document.querySelectorAll("header > *:not(h1)");
+				headerChildren.forEach((el) => {
+					el.classList.add("reveal-init");
+					setTimeout(() => el.classList.add("reveal-active"), 800);
+				});
+			} catch (e) {
+				console.error("Error in hero entry animations:", e);
+			}
+
+			// 2. Custom Cursor
+			try {
+				if (window.matchMedia("(pointer: fine)").matches) {
+					const cursor = document.createElement('div');
+					cursor.className = 'fixed top-0 left-0 w-3 h-3 bg-burnt-orangeish/80 rounded-full pointer-events-none z-[100] transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 hidden md:block';
+					document.body.appendChild(cursor);
+
+					let scale = 1;
+					document.addEventListener('mousemove', (e) => {
+						cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) scale(${scale})`;
+					});
+
+					const hoverables = document.querySelectorAll('a, button, .group, .persona-tab, .border-2, .cursor-help');
+					hoverables.forEach(el => {
+						el.addEventListener('mouseenter', () => scale = 3);
+						el.addEventListener('mouseleave', () => scale = 1);
+					});
+					console.log("Custom cursor initialized successfully");
+				}
+			} catch (e) {
+				console.error("Error in custom cursor:", e);
+			}
+
+			// 3. Smart Navbar
+			try {
+				const nav = document.getElementById('main-nav');
+				console.log("Smart Navbar - target element:", nav);
+				let lastScrollY = window.scrollY;
+
+				window.addEventListener('scroll', () => {
+					if (!nav) {
+						console.warn("Smart Navbar - nav element not found during scroll");
+						return;
+					}
+					if (window.scrollY > lastScrollY && window.scrollY > 100) {
+						// Scroll hacia abajo: Ocultar navbar
+						nav.style.transform = 'translateY(-100%)';
+					} else {
+						// Scroll hacia arriba: Mostrar navbar
+						nav.style.transform = 'translateY(0)';
+					}
+					lastScrollY = window.scrollY;
+				}, { passive: true });
+				console.log("Smart Navbar scroll listener registered");
+			} catch (e) {
+				console.error("Error in smart navbar scroll listener:", e);
+			}
+
+			// 4. User Personas Tab System
+			try {
+				const tabs = document.querySelectorAll('.persona-tab');
+				const contents = document.querySelectorAll('.persona-content');
+
+				tabs.forEach(tab => {
+					tab.addEventListener('click', () => {
+						const targetId = tab.getAttribute('data-tab');
+
+						// Update tab button styles
+						tabs.forEach(t => {
+							t.classList.remove('active', 'border-deep-moss', 'text-deep-moss');
+							t.classList.add('border-transparent', 'text-indigo-dye/60');
+						});
+						tab.classList.add('active', 'border-deep-moss', 'text-deep-moss');
+						tab.classList.remove('border-transparent', 'text-indigo-dye/60');
+
+						// Update contents visibility
+						contents.forEach(content => {
+							if (content.id === targetId) {
+								content.classList.remove('hidden');
+								content.classList.add('block');
+							} else {
+								content.classList.remove('block');
+								content.classList.add('hidden');
+							}
+						});
+						console.log(`Switched to persona tab: ${targetId}`);
+					});
+				});
+				console.log("User Personas tab system initialized successfully");
+			} catch (e) {
+				console.error("Error in User Personas tab system:", e);
+			}
+		};
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', init);
+		} else {
+			init();
+		}
+
+		// --- . Magnetic Links ---
+		const magnetics = document.querySelectorAll('nav a, nav button, header div a, footer a, .persona-tab, .magnetic-el');
+		magnetics.forEach(el => {
+			el.addEventListener('mousemove', (e) => {
+				const rect = el.getBoundingClientRect();
+				const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
+				const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
+				el.style.transform = `translate(${x}px, ${y}px)`;
+				el.style.transition = 'transform 0.1s ease-out';
+			});
+			el.addEventListener('mouseleave', () => {
+				el.style.transform = 'translate(0px, 0px)';
+				el.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+			});
+		});
+	</script>
+</body>
+
+</html>

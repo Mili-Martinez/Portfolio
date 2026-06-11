@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VEZKA Web Platform - Case Study</title>
+	<meta name="description"
+		content="Case study for VEZKA Web Platform, describing sitemaps, wireframes, prototypes, and usability studies.">
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<link rel="icon" type="image/x-icon" href="Imagenes/Marca.svg">
+	<link rel="stylesheet" href="https://use.typekit.net/owy8jgx.css">
+	<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+	<style type="text/tailwindcss">
+		@theme {
+     --text-10xl: 10rem;
+     --color-indigo-dye: #00416A;
+     --color-eggshell: #F0EAD6;
+     --color-warm-sandy: #C8B39B;
+     --color-deep-moss: #3A5635;
+     --color-burnt-orangeish: #D57B0E;
+	 --font-tt-modernoir: "tt-modernoir", sans-serif;
+	 --font-cascadia-mono: "Cascadia Mono", monospace;
+	 --font-satoshi: "Satoshi", sans-serif;
+   }
+   
+   html {
+      scroll-padding-top: 85px;
+   }
+   .reveal-init {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+   }
+   .reveal-active {
+      opacity: 1;
+      transform: translateY(0);
+   }
+   p {
+      text-wrap: pretty;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+   }
+   
+   /* Sitemap tree diagram lines */
+   .sitemap-list {
+      position: relative;
+   }
+   .sitemap-item {
+      position: relative;
+      padding-left: 1.25rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+   }
+    .sitemap-item > .sitemap-line-v {
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 1px;
+       height: 100%;
+       background-color: #00416A; /* --color-indigo-dye */
+       opacity: 0.2;
+    }
+    .sitemap-item:last-child > .sitemap-line-v {
+       height: 0.75rem; /* Stop exactly at the horizontal branch level */
+    }
+    .sitemap-item > .sitemap-line-h {
+       position: absolute;
+       left: 0;
+       top: 0.75rem;
+       width: 0.75rem;
+       height: 1px;
+       background-color: #00416A;
+       opacity: 0.2;
+    }
+	</style>
+</head>
+
+<body class="bg-eggshell selection:bg-deep-moss selection:text-eggshell font-satoshi text-indigo-dye overflow-x-hidden">
+	<!-- Navbar -->
+	<nav id="main-nav"
+		class="flex w-full justify-between items-center py-5 px-6 md:px-10 sticky top-0 z-50 bg-eggshell transition-transform duration-300 border-b border-indigo-dye/10">
+		<div>
+			<a href="index.html"
+				class="group flex items-center gap-2 font-tt-modernoir font-bold text-xl hover:text-burnt-orangeish transition-colors duration-300">
+				<i class="ph ph-arrow-left transition-transform duration-300 group-hover:-translate-x-1"></i> Back to
+				Portfolio
+			</a>
+		</div>
+		<div class="flex md:hidden font-cascadia-mono text-xs">
+			<a href="vezka.html"
+				class="text-burnt-orangeish font-bold border border-burnt-orangeish/30 bg-burnt-orangeish/5 px-3 py-1.5 hover:bg-burnt-orangeish hover:text-eggshell transition-all duration-300">
+				«App Case»
+			</a>
+		</div>
+		<div class="hidden md:flex gap-10 text-sm font-cascadia-mono">
+			<a href="#overview"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Overview»</a>
+			<a href="#sitemap"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Sitemap»</a>
+			<a href="#visuals"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Visuals»</a>
+			<a href="vezka.html"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider text-burnt-orangeish font-bold">«App
+				Case»</a>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<header class="w-[90%] mx-auto mt-20 mb-10 text-center">
+		<div class="flex flex-wrap justify-center gap-2 mb-6 font-cascadia-mono">
+			<span
+				class="border border-indigo-dye/30 bg-indigo-dye/5 px-4 py-1 text-xs uppercase tracking-wider">Information
+				Architecture</span>
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-4 py-1 text-xs uppercase tracking-wider">Web
+				UX/UI</span>
+		</div>
+		<h1 class="font-tt-modernoir font-bold text-5xl md:text-8xl leading-none mb-6">VEZKA Web<br>Platform</h1>
+		<p class="text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
+			<strong>Designing a high-conversion, responsive product website</strong> to showcase the mobile app’s
+			ecosystem,
+			optimize the digital onboarding funnel, and drive user downloads.
+		</p>
+		<div class="mb-16 flex justify-center gap-4">
+			<a href="https://www.figma.com/proto/hiiQdrgPIIhpSq959VXm3t/Wireframes?node-id=484-2&p=f&viewport=-165%2C-148%2C0.12&t=smMys2ixQFZiDaDF-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=484%3A2&show-proto-sidebar=1&page-id=437%3A1144"
+				target="_blank" rel="noopener noreferrer"
+				class="flex items-center gap-2 border-2 border-indigo-dye bg-indigo-dye text-eggshell px-6 py-3 font-cascadia-mono text-sm font-bold hover:bg-transparent hover:text-burnt-orangeish hover:border-burnt-orangeish transition-all duration-300 group">
+				<i class="ph ph-figma-logo text-lg group-hover:scale-110 transition-transform duration-200"></i> View
+				Figma
+				Prototype <i class="ph ph-arrow-up-right"></i>
+			</a>
+		</div>
+		<div
+			class="w-full aspect-video md:aspect-[21/9] bg-indigo-dye/10 border-2 border-indigo-dye/20 flex justify-center items-center overflow-hidden relative group">
+			<img src="Imagenes/vezka-web.jpg" alt="VEZKA Web Hero Image"
+				class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700">
+		</div>
+	</header>
+
+	<!-- Overview Bento Box -->
+	<section id="overview" class="w-[90%] max-w-5xl mx-auto my-30">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<div
+				class="col-span-1 md:col-span-2 border-2 border-indigo-dye p-8 hover:bg-indigo-dye/5 transition-colors duration-300">
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4 border-b border-indigo-dye/30 pb-2">The Context
+				</h3>
+				<p class="text-sm leading-relaxed">
+					As an extension of the mobile banking application, <strong>the Vezka Web Platform was designed as a
+						comprehensive corporate and marketing website.</strong> Rather than an operational transaction
+					hub, this
+					multi-page platform serves as the product’s digital flagship. It features tailored landing pages for
+					both
+					Personal and Business accounts—directly targeting freelancers and independent workers—alongside a
+					dedicated
+					Help Center for FAQs to reduce user friction. As the sole designer, <strong>I focused on scaling the
+						app's
+						visual identity into a responsive web layout, structuring cohesive navigation and grid systems
+						across
+						multiple pages to optimize user acquisition and engagement.</strong>
+				</p>
+			</div>
+			<div class="col-span-1 flex flex-col gap-6 font-cascadia-mono">
+				<div class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">My Role</h4>
+					<p class="text-lg"> UX Researcher &<br>UX/UI Designer</p>
+				</div>
+				<div class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">Timeline</h4>
+					<p class="text-lg">4 Months (2025)</p>
+				</div>
+				<a href="https://www.figma.com/file/hiiQdrgPIIhpSq959VXm3t/Wireframes" target="_blank"
+					rel="noopener noreferrer"
+					class="border-2 border-indigo-dye p-6 hover:bg-indigo-dye/5 transition-colors duration-300 flex-1 block relative group">
+					<h4 class="font-bold text-xs uppercase tracking-widest text-deep-moss mb-2">Tools</h4>
+					<p class="text-lg">Figma</p>
+					<span
+						class="absolute bottom-3 right-4 text-xs font-bold text-burnt-orangeish flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-cascadia-mono">
+						Open File <i class="ph ph-arrow-up-right"></i>
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sitemap / Information Architecture -->
+	<section id="sitemap" class="w-[90%] max-w-4xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">Information Architecture &
+			Sitemap</h2>
+		<div class="grid grid-cols-1 md:grid-cols-[1.2fr_1.8fr] gap-10 items-start">
+			<div class="space-y-6">
+				<strong class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+					Organizing the System ]</strong>
+				<p class="text-sm leading-relaxed">
+					To translate Vezka’s mobile ecosystem into a comprehensive website, I structured a<strong> clean,
+						multi-page
+						information architecture.</strong> The main goal was to ensure that <strong>personal solutions,
+						business
+						tools, and the dedicated Help Center were effortlessly accessible,</strong> providing a
+					frictionless
+					navigation system that segments user needs while strategically driving mobile app downloads.
+				</p>
+
+			</div>
+			<div class="space-y-4">
+				<strong class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+					Key Nav Nodes ]</strong>
+				<div class="space-y-2 text-sm font-satoshi">
+					<div class="border border-indigo-dye/20 p-3 bg-indigo-dye/5">
+						<span class="font-bold text-deep-moss font-cascadia-mono">1. Home & Product Landing:</span>
+						Overview
+						of the
+						mobile app
+						ecosystem, key digital banking features, and app download links.
+					</div>
+					<div class="border border-indigo-dye/20 p-3 bg-indigo-dye/5">
+						<span class="font-bold text-deep-moss font-cascadia-mono">2. Personal Banking:</span> Highlights
+						of
+						individual account
+						benefits, card management options, and day-to-day financial features.
+					</div>
+					<div class="border border-indigo-dye/20 p-3 bg-indigo-dye/5">
+						<span class="font-bold text-deep-moss font-cascadia-mono">3. Business & Freelance:</span>
+						Dedicated
+						segment
+						featuring tailored
+						solutions, account perks, and transaction overviews for independent workers.
+					</div>
+					<div class="border border-indigo-dye/20 p-3 bg-indigo-dye/5">
+						<span class="font-bold text-deep-moss font-cascadia-mono">4. Help & Support Center:</span>
+						Directory
+						of
+						interactive FAQs,
+						search tools, and a direct portal to connect with human agents.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sitemap Diagram Container -->
+		<div class="w-full mt-16 border border-indigo-dye/20 p-6 md:p-10 bg-indigo-dye/[0.01]">
+			<div
+				class="font-cascadia-mono text-xs text-indigo-dye mb-10 uppercase tracking-widest text-center select-none">
+				[ Map & Architecture Tree ]
+			</div>
+			<div class="font-satoshi text-[10px] text-indigo-dye -mt-8 mb-10 text-center italic select-none">
+				*Note: The original platform was designed in Spanish. This sitemap has been translated for presentation
+				purposes.
+			</div>
+
+			<!-- Root Node: Home -->
+			<div class="flex flex-col items-center">
+				<div
+					class="flex items-center gap-2.5 border border-indigo-dye bg-indigo-dye text-eggshell px-8 py-4 font-cascadia-mono font-bold text-sm tracking-widest uppercase select-none shadow-[4px_4px_0px_0px_rgba(0,65,106,0.15)]">
+					<i class="ph ph-house-line text-lg"></i>
+					<span>Home</span>
+				</div>
+				<!-- Vertical line down from Home -->
+				<div class="w-[2px] h-8 bg-indigo-dye/20 hidden md:block"></div>
+			</div>
+
+			<!-- Horizontal line connecting columns -->
+			<div class="relative w-full hidden md:block">
+				<div class="absolute top-0 left-[10%] right-[10%] h-[2px] bg-indigo-dye/20"></div>
+			</div>
+
+			<!-- 5 Columns Grid -->
+			<div class="grid grid-cols-1 md:grid-cols-5 gap-6 pt-0 md:pt-2">
+				<!-- Column 1: Personal -->
+				<div class="relative flex flex-col pt-8 md:pt-10">
+					<!-- Vertical connector line up to the horizontal span -->
+					<div
+						class="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-8 md:h-10 bg-indigo-dye/20 hidden md:block">
+					</div>
+
+					<!-- Column Header -->
+					<div
+						class="border border-indigo-dye/20 bg-indigo-dye/5 p-3 text-center font-cascadia-mono font-bold text-xs tracking-wider text-indigo-dye flex items-center justify-center gap-2 select-none shadow-[2px_2px_0px_0px_rgba(0,65,106,0.1)]">
+						<i class="ph ph-user text-sm text-deep-moss"></i>
+						<span>Personal</span>
+					</div>
+
+					<div class="w-[2px] h-4 bg-indigo-dye/20 mx-auto"></div>
+
+					<!-- Column Tree Body -->
+					<div class="sitemap-list pl-2">
+						<!-- Sub-category 1 -->
+						<div class="sitemap-item">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span
+								class="font-cascadia-mono font-bold text-[10px] uppercase tracking-wider text-indigo-dye block mb-1">Accounts
+								& Payments</span>
+
+							<div class="sitemap-list mt-1">
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Transfers</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Deposits</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">QR Payments</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Bill Payments</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Sub-category 2 -->
+						<div class="sitemap-item">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span
+								class="font-cascadia-mono font-bold text-[10px] uppercase tracking-wider text-indigo-dye block mb-1">Loans
+								& Credits</span>
+
+							<div class="sitemap-list mt-1">
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Personal Loans</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">UVA Loans</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Cash Advances</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Sub-category 3 -->
+						<div class="sitemap-item">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span
+								class="font-cascadia-mono font-bold text-[10px] uppercase tracking-wider text-indigo-dye block mb-1">Security
+								& Cards</span>
+
+							<div class="sitemap-list mt-1">
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Insurance</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Freeze Card</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Safe Deposit Box</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Column 2: Business -->
+				<div class="relative flex flex-col pt-8 md:pt-10">
+					<!-- Vertical connector line up to the horizontal span -->
+					<div
+						class="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-8 md:h-10 bg-indigo-dye/20 hidden md:block">
+					</div>
+
+					<!-- Column Header -->
+					<div
+						class="border border-indigo-dye/20 bg-indigo-dye/5 p-3 text-center font-cascadia-mono font-bold text-xs tracking-wider text-indigo-dye select-none shadow-[2px_2px_0px_0px_rgba(0,65,106,0.1)]">
+						<i class="ph ph-briefcase text-sm text-deep-moss"></i>
+						<span>Business</span>
+					</div>
+
+					<div class="w-[2px] h-4 bg-indigo-dye/20 mx-auto"></div>
+
+					<!-- Column Tree Body -->
+					<div class="sitemap-list pl-2">
+						<!-- Sub-category 1 -->
+						<div class="sitemap-item">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span
+								class="font-cascadia-mono font-bold text-[10px] uppercase tracking-wider text-indigo-dye block mb-1">SMEs</span>
+
+							<div class="sitemap-list mt-1">
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Account Opening</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Financial Advisory</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Merchant Billing</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Yield Accounts</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Payments</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Corporate Cards</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Check Operations</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- Sub-category 2 -->
+						<div class="sitemap-item">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span
+								class="font-cascadia-mono font-bold text-[10px] uppercase tracking-wider text-indigo-dye block mb-1">Corporates</span>
+
+							<div class="sitemap-list mt-1">
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">QR Billing</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">POS Terminals</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Fees & Commissions</span>
+								</div>
+								<div class="sitemap-item text-xs text-indigo-dye">
+									<div class="sitemap-line-v"></div>
+									<div class="sitemap-line-h"></div>
+									<span class="font-satoshi">Free Accounts</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Column 3: Help & Support -->
+				<div class="relative flex flex-col pt-8 md:pt-10">
+					<!-- Vertical connector line up to the horizontal span -->
+					<div
+						class="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-8 md:h-10 bg-indigo-dye/20 hidden md:block">
+					</div>
+
+					<!-- Column Header -->
+					<div
+						class="border border-indigo-dye/20 bg-indigo-dye/5 p-3 text-center font-cascadia-mono font-bold text-xs tracking-wider text-indigo-dye flex items-center justify-center gap-2 select-none shadow-[2px_2px_0px_0px_rgba(0,65,106,0.1)]">
+						<i class="ph ph-lifebuoy text-sm text-deep-moss"></i>
+						<span>Help & Support</span>
+					</div>
+
+					<div class="w-[2px] h-4 bg-indigo-dye/20 mx-auto"></div>
+
+					<!-- Column Tree Body -->
+					<div class="sitemap-list pl-2">
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Transfers</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Investments</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Loans</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Cards</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Support Contact</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Getting Started</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Column 4: Download App -->
+				<div class="relative flex flex-col pt-8 md:pt-10">
+					<!-- Vertical connector line up to the horizontal span -->
+					<div
+						class="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-8 md:h-10 bg-indigo-dye/20 hidden md:block">
+					</div>
+
+					<!-- Column Header -->
+					<div
+						class="border border-indigo-dye/20 bg-indigo-dye/5 p-3 text-center font-cascadia-mono font-bold text-xs tracking-wider text-indigo-dye flex items-center justify-center gap-2 select-none shadow-[2px_2px_0px_0px_rgba(0,65,106,0.1)]">
+						<i class="ph ph-download-simple text-sm text-deep-moss"></i>
+						<span>Download App</span>
+					</div>
+
+					<div class="w-[2px] h-4 bg-indigo-dye/20 mx-auto"></div>
+
+					<!-- Column Tree Body -->
+					<div class="sitemap-list pl-2">
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">iOS App Store</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Android Play Store</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Column 5: Footer -->
+				<div class="relative flex flex-col pt-8 md:pt-10">
+					<!-- Vertical connector line up to the horizontal span -->
+					<div
+						class="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-8 md:h-10 bg-indigo-dye/20 hidden md:block">
+					</div>
+
+					<!-- Column Header -->
+					<div
+						class="border border-indigo-dye/20 bg-indigo-dye/5 p-3 text-center font-cascadia-mono font-bold text-xs tracking-wider text-indigo-dye flex items-center justify-center gap-2 select-none shadow-[2px_2px_0px_0px_rgba(0,65,106,0.1)]">
+						<i class="ph ph-layout text-sm text-deep-moss"></i>
+						<span>Footer</span>
+					</div>
+
+					<div class="w-[2px] h-4 bg-indigo-dye/20 mx-auto"></div>
+
+					<!-- Column Tree Body -->
+					<div class="sitemap-list pl-2">
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">About Us</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Benefits</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Contact</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">News & Updates</span>
+						</div>
+						<div class="sitemap-item text-xs text-indigo-dye">
+							<div class="sitemap-line-v"></div>
+							<div class="sitemap-line-h"></div>
+							<span class="font-satoshi">Legal & Policies</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Wireframes Section (Paper & Digital) -->
+	<section id="wireframes" class="w-[90%] max-w-4xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">Wireframing: Paper to Digital
+		</h2>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+			<div>
+				<strong
+					class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono mb-4">[
+					1. Paper Wireframes ]</strong>
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4">Initial Ideation</h3>
+				<p class="text-sm leading-relaxed mb-4">
+					Using pen and paper, I sketched several layout variations for the web dashboard. The main focus was
+					analyzing how the sidebar navigation expands/collapses and designing flexible tables to house large
+					financial data strings without compromising readability.
+				</p>
+				<p class="text-sm leading-relaxed text-indigo-dye/80">
+					Sketches were shared with peers to validate standard desktop layout patterns and check side-by-side
+					card proportions.
+				</p>
+			</div>
+			<div
+				class="w-full aspect-[4/3] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center text-xs font-cascadia-mono opacity-50">
+				<img src="Imagenes/vezka-web-paper-wireframe.jpg" alt="" class="h-full object-cover">
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:flex-row-reverse mb-20">
+			<div class="order-2 md:order-1 flex flex-col gap-4 w-full">
+				<!-- Placeholder 1: Screen Size Variations -->
+				<div class="w-full aspect-[4/3] flex flex-col justify-center items-center text-center pb-6">
+					<img src="Imagenes/vezka-web-responsive-wireframe.png" alt="web-wireframe" class="w-full">
+				</div>
+				<!-- Placeholder 2: Key Details -->
+				<div class="w-full aspect-[4/3] flex flex-col justify-center items-center text-center pt-6">
+					<img src="Imagenes/vezka-web-detail-wireframe.png" alt="web-wireframe" class="w-full">
+				</div>
+			</div>
+			<div class="order-1 md:order-2">
+				<strong
+					class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono mb-4">[
+					2. Digital Wireframes ]</strong>
+				<h3 class="font-tt-modernoir font-bold text-2xl mb-4">Refining Content Hierarchy & Responsiveness</h3>
+				<p class="text-sm leading-relaxed mb-4">
+					Moving to Figma, I designed digital wireframes focused on <strong>simplifying navigation and
+						highlighting the most-used features first</strong>. The primary objective was to ensure maximum
+					layout clarity and accessibility for different user types across all ages.
+				</p>
+				<p class="text-sm leading-relaxed mb-4">
+					Based on feedback, I <strong>adjusted the visual hierarchy, refined spacing margins, and optimized
+						button contrast</strong> to improve overall scanability and readability on smaller mobile screen
+					variations.
+				</p>
+				<div class="space-y-3 mt-6 border-t border-indigo-dye/10 pt-4">
+					<div class="flex gap-2.5 items-start">
+						<i class="ph ph-cursor-click text-lg text-burnt-orangeish mt-0.5"></i>
+						<p class="text-xs leading-relaxed">
+							<strong>Direct Call-to-Action (CTA):</strong> A prominent homepage button invites users to
+							open a free account directly, prompting rapid action without intermediate subpages.
+						</p>
+					</div>
+					<div class="flex gap-2.5 items-start">
+						<i class="ph ph-slideshow text-lg text-burnt-orangeish mt-0.5"></i>
+						<p class="text-xs leading-relaxed">
+							<strong>FAQ Carousel:</strong> A sleek horizontal carousel organizes frequently asked
+							questions on the landing page, allowing users to find immediate answers to common concerns.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Low-Fidelity Prototype -->
+	<section id="prototype" class="w-[90%] max-w-4xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">Interactive Prototype</h2>
+		<div class="grid grid-cols-1 md:grid-cols-[1.2fr_1.8fr] gap-10 items-center">
+			<div class="space-y-6">
+				<strong class="text-xs uppercase tracking-widest text-deep-moss font-bold block font-cascadia-mono">[
+					Testing Flow Logic ]</strong>
+				<p class="text-sm leading-relaxed">
+					Before jumping into high-fidelity visual styling, I <strong>mapped and connected the wireframe
+						screens</strong> in
+					Figma to build an <strong>interactive, clickable prototype.</strong> This flow allows us to test the
+					logic of
+					<strong>onboarding procedures, client management, and search navigations,</strong> creating a solid
+					blueprint
+					to
+					evaluate user paths before development.
+				</p>
+			</div>
+			<!-- Low Fidelity Prototype Placeholder -->
+			<div class="w-full aspect-video flex flex-col justify-center items-center text-center">
+				<img src="Imagenes/vezka-web-low-fi-prototype.png" alt="low-fi-prototype" class="w-full">
+			</div>
+		</div>
+	</section>
+
+	<!-- Final Visuals Section -->
+	<section id="visuals" class="w-[90%] md:max-w-7xl mx-auto my-30">
+		<h2 class="font-tt-modernoir font-bold text-4xl md:text-5xl mb-12 text-center">Final Visuals</h2>
+		<p class="text-sm md:text-base leading-relaxed text-center max-w-4xl  mx-auto mb-16">
+			The final interface translates VEZKA's identity into a <strong> responsive web layout designed for
+				e-commerce
+				utility.</strong> By balancing a high-contrast color scheme, structured typography, and clear alignment
+			grids,
+			the layout supports <strong>user conversion goals while maintaining a clean visual hierarchy across all
+				devices.</strong>
+		</p>
+
+		<!-- Gallery Placeholders -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div
+				class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+				<img src="Imagenes/vezka-web-1.png" alt="mockup" class="h-full object-cover">
+			</div>
+			<div
+				class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:-rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+				<img src="Imagenes/vezka-web-2.png" alt="mockup" class="h-full object-cover">
+			</div>
+			<div
+				class="aspect-[3/4] bg-indigo-dye/5 border border-indigo-dye/20 flex justify-center items-center opacity-95 hover:rotate-2 hover:opacity-100 hover:bg-indigo-dye/10 transition-all duration-300">
+				<img src="Imagenes/vezka-web-3.png" alt="mockup" class="h-full object-cover">
+			</div>
+		</div>
+	</section>
+
+	<!-- Next Project Footer -->
+	<footer class="w-full bg-indigo-dye text-eggshell py-20 text-center mt-20 font-cascadia-mono">
+		<p class="text-sm uppercase tracking-widest opacity-70 mb-4">Up Next</p>
+		<a href="vezka.html"
+			class="group block font-tt-modernoir font-bold text-4xl md:text-6xl hover:text-burnt-orangeish transition-colors duration-300">
+			Vezka Mobile <i
+				class="ph ph-arrow-right inline-block group-hover:translate-x-2 transition-transform duration-300"></i>
+		</a>
+		<p class="text-xs md:text-sm max-w-2xl mx-auto leading-relaxed mt-6 text-eggshell font-satoshi w-[80%]">
+			Go back to the <strong>mobile app case study</strong> to explore user research, pain points, and how
+			security and
+			simplicity were developed.
+		</p>
+		<div class="mt-20 flex justify-center gap-6 text-sm">
+			<a href="index.html" class="hover:text-warm-sandy transition-colors">Home</a>
+			<a href="mailto:milagrosmartinezdg@gmail.com" class="hover:text-warm-sandy transition-colors">Contact</a>
+		</div>
+	</footer>
+	<script>
+		// Reveal Animation Logic and Smart Navbar
+		const init = () => {
+			console.log("Vezka Web script initialized");
+
+			// 1. Reveal Animations
+			try {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("reveal-active");
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+				const scrollElements = document.querySelectorAll(
+					"section h2, " +
+					"#overview .col-span-2, #overview .col-span-1 > div, #overview .col-span-1 > a, " +
+					"#sitemap .grid > div, #sitemap .mt-16, " +
+					"#wireframes .grid, " +
+					"#prototype .grid, " +
+					"#visuals > p, #visuals .grid > div, " +
+					"footer > p, footer > a, footer > div"
+				);
+				scrollElements.forEach((el, index) => {
+					el.classList.add("reveal-init");
+					// Stagger elements slightly if they are siblings
+					el.style.transitionDelay = `${(index % 3) * 100}ms`;
+					observer.observe(el);
+				});
+				console.log("Animations initialized successfully");
+			} catch (e) {
+				console.error("Error in reveal animations:", e);
+			}
+
+			// 1.5 Hero Entry Animations (Staggered title and hero elements)
+			try {
+				// Title staggered lines
+				const heroTitle = document.querySelector('header h1');
+				if (heroTitle) {
+					const lines = heroTitle.innerHTML.split(/<br\s*\/?>/i);
+					heroTitle.innerHTML = lines.map((line, index) => {
+						return `<span class="inline-block overflow-hidden align-bottom pb-2"><span class="block transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]" style="transform: translateY(120%); opacity: 0; transition-delay: ${150 + (index * 200)}ms" id="hero-line-${index}">${line}</span></span>`;
+					}).join('<br>');
+
+					void heroTitle.offsetWidth;
+
+					setTimeout(() => {
+						lines.forEach((_, index) => {
+							const el = document.getElementById(`hero-line-${index}`);
+							if (el) {
+								el.style.transform = 'translateY(0)';
+								el.style.opacity = '1';
+							}
+						});
+					}, 50);
+				}
+
+				// Remaining hero elements reveal on load
+				const headerChildren = document.querySelectorAll("header > *:not(h1)");
+				headerChildren.forEach((el) => {
+					el.classList.add("reveal-init");
+					setTimeout(() => el.classList.add("reveal-active"), 800);
+				});
+			} catch (e) {
+				console.error("Error in hero entry animations:", e);
+			}
+
+			// 2. Custom Cursor
+			try {
+				if (window.matchMedia("(pointer: fine)").matches) {
+					const cursor = document.createElement('div');
+					cursor.className = 'fixed top-0 left-0 w-3 h-3 bg-burnt-orangeish/80 rounded-full pointer-events-none z-[100] transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 hidden md:block';
+					document.body.appendChild(cursor);
+
+					let scale = 1;
+					document.addEventListener('mousemove', (e) => {
+						cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) scale(${scale})`;
+					});
+
+					const hoverables = document.querySelectorAll('a, button, .group, .persona-tab, .border-2, .cursor-help');
+					hoverables.forEach(el => {
+						el.addEventListener('mouseenter', () => scale = 3);
+						el.addEventListener('mouseleave', () => scale = 1);
+					});
+					console.log("Custom cursor initialized successfully");
+				}
+			} catch (e) {
+				console.error("Error in custom cursor:", e);
+			}
+
+			// 3. Magnetic Links
+			try {
+				const magnetics = document.querySelectorAll('nav a, nav button, footer a, header div a, .magnetic-el');
+				magnetics.forEach(el => {
+					el.addEventListener('mousemove', (e) => {
+						const rect = el.getBoundingClientRect();
+						const x = (e.clientX - rect.left - rect.width / 2) * 0.2;
+						const y = (e.clientY - rect.top - rect.height / 2) * 0.2;
+						el.style.transform = `translate(${x}px, ${y}px)`;
+						el.style.transition = 'transform 0.1s ease-out';
+					});
+					el.addEventListener('mouseleave', () => {
+						el.style.transform = 'translate(0px, 0px)';
+						el.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+					});
+				});
+				console.log("Magnetic links initialized successfully");
+			} catch (e) {
+				console.error("Error in magnetic links:", e);
+			}
+
+			// 4. Smart Navbar
+			try {
+				const nav = document.getElementById('main-nav');
+				let lastScrollY = window.scrollY;
+
+				window.addEventListener('scroll', () => {
+					if (!nav) return;
+					if (window.scrollY > lastScrollY && window.scrollY > 100) {
+						nav.style.transform = 'translateY(-100%)';
+					} else {
+						nav.style.transform = 'translateY(0)';
+					}
+					lastScrollY = window.scrollY;
+				}, { passive: true });
+				console.log("Smart Navbar scroll listener registered");
+			} catch (e) {
+				console.error("Error in smart navbar scroll listener:", e);
+			}
+		};
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', init);
+		} else {
+			init();
+		}
+	</script>
+</body>
+
+</html>
