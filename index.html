@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Milagros Martinez - Portfolio</title>
+	<meta name="description"
+		content="Portfolio of Milagros Martinez, a Graphic Designer and UI Developer crafting polished interfaces from concept to clean, responsive code.">
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+	<link rel="icon" type="image/x-icon" href="Imagenes/Marca.svg">
+	<link rel="stylesheet" href="https://use.typekit.net/owy8jgx.css">
+	<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+	<style type="text/tailwindcss">
+		@theme {
+     --text-10xl: 10rem;
+     --color-indigo-dye: #00416A;
+     --color-eggshell: #F0EAD6;
+     --color-warm-sandy: #C8B39B;
+     --color-deep-moss: #3A5635;
+     --color-burnt-orangeish: #D57B0E;
+	 --font-tt-modernoir: "tt-modernoir", sans-serif;
+	 --font-cascadia-mono: "Cascadia Mono", monospace;
+	 --font-satoshi: "Satoshi", sans-serif;
+	 --animate-float-slow: float-slow 6s ease-in-out infinite;
+	 --animate-float-slow-reverse: float-slow-reverse 7s ease-in-out infinite;
+   }
+   
+   @keyframes float-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+   }
+   
+   @keyframes float-slow-reverse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(12px); }
+   }
+   
+   html {
+      scroll-padding-top: 85px;
+   }
+   p {
+      text-wrap: pretty;
+   }
+   h1, h2, h3, h4, h5, h6 {
+      text-wrap: balance;
+   }
+   .reveal-init {
+       opacity: 0;
+       transform: translateY(40px);
+       transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-active {
+       opacity: 1;
+       transform: translateY(0);
+    }
+    /* Ocultar cursor nativo si el cursor personalizado está activo */
+    .custom-cursor-active,
+    .custom-cursor-active a,
+    .custom-cursor-active button,
+    .custom-cursor-active .group,
+    .custom-cursor-active .persona-tab,
+    .custom-cursor-active .border-2,
+    .custom-cursor-active .cursor-help {
+       cursor: none !important;
+    }
+	</style>
+</head>
+
+<body class="bg-eggshell selection:bg-deep-moss selection:text-eggshell overflow-x-hidden">
+	<nav id="main-nav"
+		class="flex bg-eggshell w-full text-indigo-dye gap-3 md:gap-10 justify-between items-center sticky z-50 top-0 py-5 px-4 md:px-10 transition-transform duration-300">
+		<div>
+			<a href="#"
+				class="font-tt-modernoir font-bold text-xl hover:text-burnt-orangeish transition-colors duration-300">Milagros
+				Martinez</a>
+		</div>
+		<div class="flex md:hidden">
+			<button id="open-menu" type="button" aria-controls="mobile-menu" aria-expanded="false"
+				aria-label="Open mobile menu" class="hover:cursor-pointer"><i
+					class="ph ph-list text-2xl font-bold"></i></button>
+		</div>
+		<div class="hidden md:flex gap-10 font-cascadia-mono text-sm">
+			<a href="#projects"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">
+				«Projects»</a>
+			<a href="#about-me"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«About
+				me»</a>
+			<a href="#contact"
+				class="transition-all duration-200 tracking-tighter hover:transition-delay-200 hover:tracking-wider">«Contact»</a>
+		</div>
+	</nav>
+	<div id="mobile-menu"
+		class="fixed inset-0 z-50 bg-indigo-dye/95 backdrop-blur-lg transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden flex flex-col pt-8 px-8 font-cascadia-mono text-eggshell">
+		<div class="flex justify-end w-full relative z-10">
+			<button id="close-menu" type="button" aria-label="Close mobile menu"
+				class="p-2 transition-transform duration-300 hover:rotate-90 hover:text-burnt-orangeish hover:cursor-pointer">
+				<i class="ph ph-x text-3xl font-bold"></i>
+			</button>
+		</div>
+		<div class="flex flex-col flex-1 justify-center gap-10 text-center text-3xl font-light tracking-wide -mt-10">
+			<a href="#projects"
+				class="transition-all duration-300 tracking-tighter hover:tracking-wider hover:text-burnt-orangeish">
+				«Projects»</a>
+			<a href="#about-me"
+				class="transition-all duration-300 tracking-tighter hover:tracking-wider hover:text-burnt-orangeish">«About
+				me»</a>
+			<a href="#contact"
+				class="transition-all duration-300 tracking-tighter hover:tracking-wider hover:text-burnt-orangeish">«Contact»</a>
+		</div>
+		<div class="pb-10 flex flex-col items-center gap-4 border-t border-eggshell/10 pt-6">
+			<div class="flex gap-6 text-2xl">
+				<a href="https://www.linkedin.com/in/milagros-desir%C3%A9e-martinez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"
+					class="hover:text-burnt-orangeish hover:-translate-y-1 transition-transform"><i
+						class="ph ph-linkedin-logo"></i></a>
+				<a href="https://github.com/Mili-Martinez" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"
+					class="hover:text-burnt-orangeish hover:-translate-y-1 transition-transform"><i
+						class="ph ph-github-logo"></i></a>
+			</div>
+			<a href="mailto:milagrosmartinezdg@gmail.com"
+				class="text-xs text-eggshell hover:text-burnt-orangeish transition-colors tracking-widest">milagrosmartinezdg@gmail.com</a>
+		</div>
+	</div>
+	<header class="mt-10 bg-indigo-dye w-[90%] mx-auto py-20 relative px-4 sm:px-6">
+		<h1 class="font-tt-modernoir font-bold text-eggshell text-5xl md:text-9xl text-center leading-none my-10">Visual
+			Designer
+			&<br>UI
+			Developer
+		</h1>
+	</header>
+	<div
+		class="mt-20 mb-10 px-4 sm:px-6 min-h-[260px] md:h-[420px] flex items-center justify-center relative select-none">
+		<p id="hero-typing-text" class="font-cascadia-mono text-indigo-dye text-center text-xs md:text-base pb-20 z-20">
+			*Crafting polished interfaces from<br class="md:hidden">
+			<span
+				class="relative inline-block group/tooltip cursor-help text-burnt-orangeish font-bold transition-all duration-300 hover:scale-105 underline decoration-dashed decoration-burnt-orangeish/40 underline-offset-4">
+				concept
+				<span
+					class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-indigo-dye text-eggshell text-xs font-satoshi font-normal rounded opacity-0 scale-95 pointer-events-none group-hover/tooltip:opacity-100 group-hover/tooltip:scale-100 transition-all duration-300 whitespace-nowrap shadow-xl z-30">
+					🎨 Sketches, wireframes & branding
+				</span>
+			</span>
+			to
+			<span
+				class="relative inline-block group/tooltip cursor-help text-deep-moss font-bold transition-all duration-300 hover:scale-105 underline decoration-dashed decoration-deep-moss/40 underline-offset-4">
+				clean, responsive code
+				<span
+					class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-indigo-dye text-eggshell text-xs font-satoshi font-normal rounded opacity-0 scale-95 pointer-events-none group-hover/tooltip:opacity-100 group-hover/tooltip:scale-100 transition-all duration-300 whitespace-nowrap shadow-xl z-30">
+					💻 Semantic HTML, styling & interactions
+				</span>
+			</span>*
+		</p>
+		<div class="absolute z-10 w-[32%] left-[-14%] bottom-[-6%] animate-float-slow pointer-events-none">
+			<img src="Imagenes/landing-ilustration.png" alt="illustration" class="w-full -scale-x-100">
+		</div>
+		<div class="absolute z-10 w-[30%] right-[-14%] top-[-14%] animate-float-slow-reverse pointer-events-none">
+			<img src="Imagenes/landing-ilustration-2.png" alt="illustration" class="w-full">
+		</div>
+	</div>
+	<section id="projects" class="w-[90%] mx-auto my-10">
+		<h2 class="border-indigo-dye border-y-2 font-tt-modernoir text-indigo-dye px-4 py-2 text-4xl font-bold ">
+			Projects
+		</h2>
+		<div class="flex flex-col gap-[30px] mt-10">
+			<!--Project 1 | VRTX. Performance Lab-->
+			<div
+				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8  hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				<div class="flex flex-col text-left gap-4 justify-center">
+					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">VRTX.</span>
+						Performance Lab</p>
+					<div class="flex flex-wrap gap-2">
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">UI Design</span>
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Frontend Dev</span>
+					</div>
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">A high-performance SaaS dashboard
+						featuring
+						complex data
+						visualization
+						and
+						dark-mode
+						aesthetics built with Tailwind CSS.</p>
+					<div class="flex gap-4 mt-2">
+						<a href="https://mili-martinez.github.io/VRTX/" target="_blank" rel="noopener noreferrer"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							Live Demo <i class="ph ph-arrow-up-right"></i>
+						</a>
+						<a href="https://github.com/Mili-Martinez/VRTX" target="_blank" rel="noopener noreferrer"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							GitHub <i class="ph ph-github-logo"></i>
+						</a>
+					</div>
+				</div>
+				<div class="flex justify-end items-end overflow-hidden">
+					<video autoplay loop muted playsinline
+						class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500">
+						<source src="Imagenes/vrtx..mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+
+			<!--Project 2 | Lumina E-commerce-->
+			<div
+				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8  hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				<div class="flex flex-col text-left gap-4 justify-center">
+					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">Lumina</span>
+						E-commerce
+					</p>
+					<div class="flex flex-wrap gap-2">
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Web Design</span>
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Frontend Dev</span>
+					</div>
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">A minimal and sophisticated
+						shopping
+						experience for exclusive high-end products, emphasizing clean
+						typography and white space.</p>
+					<div class="flex gap-4 mt-2">
+						<a href="https://mili-martinez.github.io/Checkout-Lumina-Studio/" target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							Live Demo <i class="ph ph-arrow-up-right"></i>
+						</a>
+						<a href="https://github.com/Mili-Martinez/Checkout-Lumina-Studio" target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							GitHub <i class="ph ph-github-logo"></i>
+						</a>
+					</div>
+				</div>
+				<div class="flex justify-end items-end overflow-hidden ">
+					<video autoplay loop muted playsinline
+						class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500">
+						<source src="Imagenes/Lumina.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<!--Project 3 | Distribuidora Danielle-->
+			<div
+				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8 hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				<div class="flex flex-col text-left gap-4 justify-center">
+					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">Distribuidora
+							Danielle</span><br>Brand
+						&
+						Web Presence</p>
+					<div class="flex flex-wrap gap-2">
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Visual
+							Identity</span>
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Web Design</span>
+					</div>
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">Redesigning the visual identity
+						for a local
+						distributor, combined with a self-initiated e-commerce landing page concept to scale their
+						commercial
+						digital presence.</p>
+					<div class="flex gap-4 mt-2">
+						<a href="danielle.html"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							View case study <i class="ph ph-arrow-up-right"></i>
+						</a>
+						<a href="https://mili-martinez.github.io/danielle-distribuidora/" target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							Live Demo <i class="ph ph-arrow-up-right"></i>
+						</a>
+						<a href="https://github.com/Mili-Martinez/danielle-distribuidora" target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							GitHub <i class="ph ph-github-logo"></i>
+						</a>
+					</div>
+				</div>
+				<div class="flex justify-center items-center overflow-hidden">
+					<img src="Imagenes/danielle.png" alt="Librería Danielle"
+						class="w-full object-cover group-hover:scale-[1.02] transition-transform duration-500">
+				</div>
+			</div>
+			<!--Project 4 | VEZKA — Bank Ecosystem-->
+			<div
+				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8  hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				<div class="flex flex-col text-left gap-4 justify-center">
+					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">VEZKA</span> Bank
+						Ecosystem</p>
+					<div class="flex flex-wrap gap-2">
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">UX Research</span>
+						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">UI Case
+							Study</span>
+					</div>
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">A comprehensive digital banking
+						solution
+						focused on
+						financial inclusion and seamless user&nbsp;flows.</p>
+					<div class="flex gap-4 mt-2">
+						<a href="vezka.html"
+							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							View Case Study <i class="ph ph-arrow-right"></i>
+						</a>
+						<a href="https://www.figma.com/proto/hiiQdrgPIIhpSq959VXm3t/Wireframes?node-id=209-1061&viewport=281%2C115%2C0.13&t=1D56P4Ny5OP0MKXZ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=209%3A1061&page-id=209%3A520"
+							target="_blank" rel="noopener noreferrer"
+							class="flex items-center gap-1.5 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
+							Figma Prototype <i class="ph ph-figma-logo"></i>
+						</a>
+					</div>
+				</div>
+				<div class="flex justify-center items-center overflow-hidden">
+					<img src="Imagenes/Vezka.png" alt="VEZKA Bank Ecosystem"
+						class="h-[80%] w-[80%] object-contain group-hover:scale-[1.02] transition-transform duration-500">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="about-me" class="w-[90%] mx-auto mt-[30px] mb-10">
+		<h2 class="border-indigo-dye border-y-2 font-tt-modernoir text-indigo-dye px-4 py-2 text-4xl font-bold ">
+			About me
+		</h2>
+		<div class="mt-10 px-4 font-satoshi text-indigo-dye text-xs md:text-sm flex flex-col lg:flex-row gap-10">
+			<div class="flex-1 flex justify-center items-center">
+				<div
+					class="w-full max-w-[350px] aspect-square border-2 border-indigo-dye/20  flex justify-center items-center hover:rotate-2 transition-transform duration-500 ">
+					<img src="Imagenes/about-me.jpg" alt="Milagros Martinez" class=" object-cover">
+				</div>
+			</div>
+			<div class="flex-1 flex flex-col gap-6 leading-relaxed md:w-full w-[95%] ">
+				<p>
+					<strong>I'm a Graphic Designer (UNNE), but my work lives on the screen. I specialize in UI
+						Development and
+						visual
+						design,</strong> merging my background in visual communication and digital illustration with
+					technical
+					implementation
+					using HTML, CSS, and Tailwind.
+				</p>
+				<p>
+					Through my freelance experience, I've learned how to turn real-world needs into cohesive visual
+					identities.
+					<strong>My
+						main passion is crafting interfaces directly with code, ensuring that a design never loses its
+						essence when
+						translated to the browser.</strong> That's why I design with development in mind—balancing
+					aesthetics with
+					accessibility and pixel-perfect layouts.
+				</p>
+				<p>
+					For over a decade, I've been dedicated to strength training and fitness. The discipline,
+					consistency, and
+					resilience I've built in the gym are the exact same tools I bring to my work today.<span
+						class="font-bold mt-2 md:mt-0">
+						I'm looking to join a team where I can use my visual eye and technical skills to bridge the gap
+						between
+						great design and flawless&nbsp;execution.</span>
+				</p>
+				<div class="pt-4 font-cascadia-mono">
+					<div
+						class="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-3 border-t border-indigo-dye/40 p-3">
+						<p class="font-tt-modernoir text-indigo-dye font-bold text-base whitespace-nowrap shrink-0">
+							Design Tools
+						</p>
+						<div class="flex flex-wrap md:justify-end gap-2">
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Figma</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Illustrator</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Photoshop</span>
+						</div>
+					</div>
+					<div
+						class="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-3 border-t border-indigo-dye/40 p-3">
+						<p class="font-tt-modernoir text-indigo-dye font-bold text-base whitespace-nowrap shrink-0">
+							Design Skills
+						</p>
+						<div class="flex flex-wrap md:justify-end gap-2">
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">UI
+								Design</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Design
+								Systems</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Visual
+								Identity</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Responsive
+								Layouts</span>
+						</div>
+					</div>
+					<div
+						class="flex flex-col md:flex-row md:justify-between items-start md:items-center gap-3 border-y border-indigo-dye/40 p-3">
+						<p class="font-tt-modernoir text-indigo-dye font-bold text-base whitespace-nowrap shrink-0">UI
+							Development
+						</p>
+						<div class="flex flex-wrap md:justify-end gap-2">
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">HTML5</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">CSS3</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Tailwind
+								CSS</span>
+							<span
+								class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs whitespace-nowrap">Git
+								&
+								GitHub</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col text-start justify-start mt-8 bg-indigo-dye/5 border border-indigo-dye/40 p-6">
+			<h3 class="font-tt-modernoir text-indigo-dye font-bold text-base whitespace-nowrap shrink-0">Education &
+				Certifications
+			</h3>
+			<div
+				class="flex font-satoshi text-indigo-dye text-xs md:text-sm flex-col text-start md:flex-row justify-between items-start gap-6 mt-6">
+				<p class="w-full break-words"><a href="assets/docs/titulo-unne-milagros-martinez.pdf" target="_blank"
+						rel="noopener noreferrer"><span
+							class="font-bold text-burnt-orangeish hover:text-indigo-dye font-cascadia-mono">B.A. in
+							Graphic
+							Design <i class="ph ph-arrow-up-right"></i></span><br>
+						Universidad Nacional del Nordeste (UNNE)</a></p>
+				<p class="w-full break-words"><a href="assets/docs/coursera-ux-design.pdf" target="_blank"
+						rel="noopener noreferrer"><span
+							class="font-bold text-burnt-orangeish hover:text-indigo-dye font-cascadia-mono">Google UX
+							Design Professional Certificate <i class="ph ph-arrow-up-right"></i></span><br>
+						Coursera</a></p>
+				<p class="w-full break-words"><a
+						href="https://www.freecodecamp.org/certification/milimartinez/responsive-web-design"
+						target="_blank" rel="noopener noreferrer"><span
+							class="font-bold text-burnt-orangeish hover:text-indigo-dye font-cascadia-mono">Responsive
+							Web
+							Design Certification <i class="ph ph-arrow-up-right"></i></span><br>
+						freeCodeCamp</a></p>
+
+			</div>
+		</div>
+	</section>
+	<footer id="contact" class="w-[90%] mx-auto mt-[30px] mb-10 font-cascadia-mono text-indigo-dye">
+		<h2
+			class="bg-indigo-dye font-tt-modernoir text-eggshell px-4 py-6 text-4xl md:text-5xl font-bold text-center hover:bg-deep-moss transition-colors duration-300">
+			Let's build something great.
+		</h2>
+		<div class="flex flex-col md:flex-row justify-between items-center mt-10 gap-6 px-4">
+			<div class="flex flex-col items-center md:items-start gap-2">
+				<p class="text-xs">Have a project in mind?</p>
+				<a href="mailto:milagrosmartinezdg@gmail.com"
+					class="text-lg min-[390px]:text-xl sm:text-2xl md:text-3xl font-bold hover:text-burnt-orangeish transition-colors duration-300">milagrosmartinezdg@gmail.com</a>
+			</div>
+			<div class="flex gap-6 text-sm">
+				<a href="https://www.linkedin.com/in/milagros-desir%C3%A9e-martinez" target="_blank" rel="noopener noreferrer"
+					class="flex items-center gap-1 hover:text-burnt-orangeish hover:-translate-y-0.5 transition-all duration-300">
+					LinkedIn <i class="ph ph-arrow-up-right"></i>
+				</a>
+				<a href="https://github.com/Mili-Martinez" target="_blank" rel="noopener noreferrer"
+					class="flex items-center gap-1 hover:text-burnt-orangeish hover:-translate-y-0.5 transition-all duration-300">
+					GitHub <i class="ph ph-arrow-up-right"></i>
+				</a>
+			</div>
+		</div>
+		<div class="text-center text-xs mt-20 opacity-50">
+			<p>© 2026 Milagros Desirée Martinez. Designed & coded from scratch.</p>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
