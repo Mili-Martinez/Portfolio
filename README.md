@@ -1,6 +1,6 @@
 # My Professional Portfolio — Design & UI Development
 
-<img src="Imagenes/Portfolio.jpg" alt="Portfolio Hub Showcase" width="100%">
+<img src="Imagenes/portfolio.jpg" alt="Portfolio Hub Showcase" width="100%">
 
 ### 🚀 [View Live Website](https://mili-martinez.github.io/Portfolio/)
 
