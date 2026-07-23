@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Milagros Martinez - Portfolio</title>
 	<meta name="description"
-		content="Portfolio of Milagros Martinez, a Graphic Designer and UI Developer crafting polished interfaces from concept to clean, responsive code.">
+		content="Portfolio of Milagros Martinez, a UI Developer and Graphic Designer crafting polished interfaces from concept to clean, responsive code.">
 	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 	<link rel="icon" type="image/x-icon" href="Imagenes/Marca.svg">
 	<link rel="stylesheet" href="https://use.typekit.net/owy8jgx.css">
@@ -117,7 +117,7 @@
 		</div>
 		<div class="pb-10 flex flex-col items-center gap-4 border-t border-eggshell/10 pt-6">
 			<div class="flex gap-6 text-2xl">
-				<a href="https://www.linkedin.com/in/milagros-desiree-martinez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"
+				<a href="https://www.linkedin.com/in/milagros-desir%C3%A9e-martinez" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"
 					class="hover:text-burnt-orangeish hover:-translate-y-1 transition-transform"><i
 						class="ph ph-linkedin-logo"></i></a>
 				<a href="https://github.com/Mili-Martinez" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"
@@ -129,15 +129,15 @@
 		</div>
 	</div>
 	<header class="mt-10 bg-indigo-dye w-[90%] mx-auto py-20 relative px-4 sm:px-6">
-		<h1 class="font-tt-modernoir font-bold text-eggshell text-5xl md:text-9xl text-center leading-none my-10">Visual
-			Designer
-			&<br>UI
+		<h1 class="font-tt-modernoir font-bold text-eggshell text-5xl md:text-9xl text-center leading-none my-10">UI
 			Developer
+			&<br>Visual
+			Designer
 		</h1>
 	</header>
 	<div
-		class="mt-20 mb-10 px-4 sm:px-6 min-h-[260px] md:h-[420px] flex items-center justify-center relative select-none">
-		<p id="hero-typing-text" class="font-cascadia-mono text-indigo-dye text-center text-xs md:text-base pb-20 z-20">
+		class="mt-20 mb-10 px-4 sm:px-6 min-h-[260px] md:h-[420px] flex flex-col items-center justify-center relative select-none">
+		<p id="hero-typing-text" class="font-cascadia-mono text-indigo-dye text-center text-xs md:text-base pb-6 z-20">
 			*Crafting polished interfaces from<br class="md:hidden">
 			<span
 				class="relative inline-block group/tooltip cursor-help text-burnt-orangeish font-bold transition-all duration-300 hover:scale-105 underline decoration-dashed decoration-burnt-orangeish/40 underline-offset-4">
@@ -157,6 +157,13 @@
 				</span>
 			</span>*
 		</p>
+		<!-- Stack tags con bordes rectos (cohesivos con la identidad del sitio) -->
+		<div class="flex flex-wrap justify-center gap-2 font-cascadia-mono text-xs text-indigo-dye z-20 pb-12">
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1">HTML5</span>
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1">Tailwind CSS</span>
+			<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1">Responsive UI</span>
+		</div>
+		<!-- Ilustraciones originales en los bordes -->
 		<div class="absolute z-10 w-[32%] left-[-14%] bottom-[-6%] animate-float-slow pointer-events-none">
 			<img src="Imagenes/landing-ilustration.png" alt="illustration" class="w-full -scale-x-100">
 		</div>
@@ -171,22 +178,34 @@
 		<div class="flex flex-col gap-[30px] mt-10">
 			<!--Project 1 | VRTX. Performance Lab-->
 			<div
-				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8  hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				class="group grid grid-cols-1 md:grid-cols-[380px_1fr] gap-8 md:gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8 border-b border-indigo-dye/15 hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
 				<div class="flex flex-col text-left gap-4 justify-center">
-					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">VRTX.</span>
-						Performance Lab</p>
-					<div class="flex flex-wrap gap-2">
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">UI Design</span>
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Frontend Dev</span>
+					<div>
+						<h3 class="text-2xl font-black tracking-tight">VRTX</h3>
+						<p class="text-xs font-semibold text-burnt-orangeish uppercase tracking-wider mt-0.5">Performance Dashboard</p>
 					</div>
-					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">A high-performance SaaS dashboard
-						featuring
-						complex data
-						visualization
-						and
-						dark-mode
-						aesthetics built with Tailwind CSS.</p>
-					<div class="flex gap-4 mt-2">
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi text-indigo-dye/90">
+						High-performance dashboard designed and developed with HTML & Tailwind CSS.
+					</p>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">My Role</p>
+						<div class="flex flex-wrap gap-2 pt-0.5">
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">UI Design</span>
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">Front-end Development</span>
+						</div>
+					</div>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">Highlights</p>
+						<ul class="flex flex-wrap gap-x-4 gap-y-1 font-satoshi text-xs text-indigo-dye/90">
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Component-based</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Responsive</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Dark theme</li>
+						</ul>
+					</div>
+
+					<div class="flex gap-4 mt-2 pt-2 border-t border-indigo-dye/10">
 						<a href="https://mili-martinez.github.io/VRTX/" target="_blank" rel="noopener noreferrer"
 							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
 							Live Demo <i class="ph ph-arrow-up-right"></i>
@@ -197,7 +216,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="flex justify-end items-end overflow-hidden">
+				<div class="flex justify-end items-end overflow-hidden rounded-sm">
 					<video autoplay loop muted playsinline
 						class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500">
 						<source src="Imagenes/vrtx..mp4" type="video/mp4">
@@ -207,20 +226,34 @@
 
 			<!--Project 2 | Lumina E-commerce-->
 			<div
-				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8  hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				class="group grid grid-cols-1 md:grid-cols-[380px_1fr] gap-8 md:gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8 border-b border-indigo-dye/15 hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
 				<div class="flex flex-col text-left gap-4 justify-center">
-					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">Lumina</span>
-						E-commerce
-					</p>
-					<div class="flex flex-wrap gap-2">
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Web Design</span>
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Frontend Dev</span>
+					<div>
+						<h3 class="text-2xl font-black tracking-tight">Lumina</h3>
+						<p class="text-xs font-semibold text-burnt-orangeish uppercase tracking-wider mt-0.5">E-commerce Studio</p>
 					</div>
-					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">A minimal and sophisticated
-						shopping
-						experience for exclusive high-end products, emphasizing clean
-						typography and white space.</p>
-					<div class="flex gap-4 mt-2">
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi text-indigo-dye/90">
+						Minimal and sophisticated shopping experience designed & developed for high-end digital commerce.
+					</p>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">My Role</p>
+						<div class="flex flex-wrap gap-2 pt-0.5">
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">Web Design</span>
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">Front-end Development</span>
+						</div>
+					</div>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">Highlights</p>
+						<ul class="flex flex-wrap gap-x-4 gap-y-1 font-satoshi text-xs text-indigo-dye/90">
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Minimal Typography</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Responsive Layout</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Clean UI</li>
+						</ul>
+					</div>
+
+					<div class="flex gap-4 mt-2 pt-2 border-t border-indigo-dye/10">
 						<a href="https://mili-martinez.github.io/Checkout-Lumina-Studio/" target="_blank"
 							rel="noopener noreferrer"
 							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
@@ -233,32 +266,44 @@
 						</a>
 					</div>
 				</div>
-				<div class="flex justify-end items-end overflow-hidden ">
+				<div class="flex justify-end items-end overflow-hidden rounded-sm">
 					<video autoplay loop muted playsinline
 						class="h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-500">
 						<source src="Imagenes/Lumina.mp4" type="video/mp4">
 					</video>
 				</div>
 			</div>
+
 			<!--Project 3 | Distribuidora Danielle-->
 			<div
-				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8 hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				class="group grid grid-cols-1 md:grid-cols-[380px_1fr] gap-8 md:gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8 border-b border-indigo-dye/15 hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
 				<div class="flex flex-col text-left gap-4 justify-center">
-					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">Distribuidora
-							Danielle</span><br>Brand
-						&
-						Web Presence</p>
-					<div class="flex flex-wrap gap-2">
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Visual
-							Identity</span>
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">Web Design</span>
+					<div>
+						<h3 class="text-2xl font-black tracking-tight">Distribuidora Danielle</h3>
+						<p class="text-xs font-semibold text-burnt-orangeish uppercase tracking-wider mt-0.5">Brand & Web Presence</p>
 					</div>
-					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">Redesigning the visual identity
-						for a local
-						distributor, combined with a self-initiated e-commerce landing page concept to scale their
-						commercial
-						digital presence.</p>
-					<div class="flex gap-4 mt-2">
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi text-indigo-dye/90">
+						Visual identity redesign combined with a self-initiated e-commerce landing page concept to scale commercial digital presence.
+					</p>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">My Role</p>
+						<div class="flex flex-wrap gap-2 pt-0.5">
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">Visual Identity</span>
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">Web Design</span>
+						</div>
+					</div>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">Highlights</p>
+						<ul class="flex flex-wrap gap-x-4 gap-y-1 font-satoshi text-xs text-indigo-dye/90">
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Brand System</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> E-commerce Concept</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Case Study</li>
+						</ul>
+					</div>
+
+					<div class="flex flex-wrap gap-4 mt-2 pt-2 border-t border-indigo-dye/10">
 						<a href="danielle.html"
 							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
 							View case study <i class="ph ph-arrow-up-right"></i>
@@ -275,27 +320,42 @@
 						</a>
 					</div>
 				</div>
-				<div class="flex justify-center items-center overflow-hidden">
+				<div class="flex justify-center items-center overflow-hidden rounded-sm">
 					<img src="Imagenes/danielle.png" alt="Librería Danielle"
 						class="w-full object-cover group-hover:scale-[1.02] transition-transform duration-500">
 				</div>
 			</div>
+
 			<!--Project 4 | VEZKA — Bank Ecosystem-->
 			<div
-				class="group grid grid-cols-1 md:grid-cols-[350px_1fr] gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8  hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
+				class="group grid grid-cols-1 md:grid-cols-[380px_1fr] gap-8 md:gap-12 w-full font-cascadia-mono text-indigo-dye px-4 py-8 hover:bg-warm-sandy/20 hover:-translate-y-1 transition-all duration-300">
 				<div class="flex flex-col text-left gap-4 justify-center">
-					<p class="text-xl tracking-tighter"><span class="font-black tracking-normal">VEZKA</span> Bank
-						Ecosystem</p>
-					<div class="flex flex-wrap gap-2">
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">UX Research</span>
-						<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-3 py-1 text-xs">UI Case
-							Study</span>
+					<div>
+						<h3 class="text-2xl font-black tracking-tight">VEZKA</h3>
+						<p class="text-xs font-semibold text-burnt-orangeish uppercase tracking-wider mt-0.5">Bank Ecosystem</p>
 					</div>
-					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi">A comprehensive digital banking
-						solution
-						focused on
-						financial inclusion and seamless user&nbsp;flows.</p>
-					<div class="flex gap-4 mt-2">
+					<p class="text-sm md:w-full w-[95%] leading-relaxed font-satoshi text-indigo-dye/90">
+						Comprehensive digital banking solution focused on financial inclusion, user flows, and modern design systems.
+					</p>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">My Role</p>
+						<div class="flex flex-wrap gap-2 pt-0.5">
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">UX Research</span>
+							<span class="border border-indigo-dye/30 bg-indigo-dye/5 px-2.5 py-1">UI Case Study</span>
+						</div>
+					</div>
+
+					<div class="space-y-1 text-xs">
+						<p class="font-bold text-indigo-dye uppercase tracking-wider text-[11px] opacity-75">Highlights</p>
+						<ul class="flex flex-wrap gap-x-4 gap-y-1 font-satoshi text-xs text-indigo-dye/90">
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> User Flows</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Figma Prototype</li>
+							<li class="flex items-center gap-1"><span class="text-burnt-orangeish font-bold">✓</span> Design System</li>
+						</ul>
+					</div>
+
+					<div class="flex gap-4 mt-2 pt-2 border-t border-indigo-dye/10">
 						<a href="vezka.html"
 							class="flex items-center gap-1 text-sm font-bold text-burnt-orangeish hover:text-indigo-dye transition-colors duration-200">
 							View Case Study <i class="ph ph-arrow-right"></i>
@@ -307,7 +367,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="flex justify-center items-center overflow-hidden">
+				<div class="flex justify-center items-center overflow-hidden rounded-sm">
 					<img src="Imagenes/Vezka.png" alt="VEZKA Bank Ecosystem"
 						class="h-[80%] w-[80%] object-contain group-hover:scale-[1.02] transition-transform duration-500">
 				</div>
@@ -451,7 +511,7 @@
 					class="text-lg min-[390px]:text-xl sm:text-2xl md:text-3xl font-bold hover:text-burnt-orangeish transition-colors duration-300">milagrosmartinezdg@gmail.com</a>
 			</div>
 			<div class="flex gap-6 text-sm">
-				<a href="https://www.linkedin.com/in/milagros-desiree-martinez/" target="_blank" rel="noopener noreferrer"
+				<a href="https://www.linkedin.com/in/milagros-desir%C3%A9e-martinez" target="_blank" rel="noopener noreferrer"
 					class="flex items-center gap-1 hover:text-burnt-orangeish hover:-translate-y-0.5 transition-all duration-300">
 					LinkedIn <i class="ph ph-arrow-up-right"></i>
 				</a>
